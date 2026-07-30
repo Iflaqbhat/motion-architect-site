@@ -22,10 +22,10 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <Link to="/" onClick={() => setOpen(false)}>
-          <Logo />
+          <Logo tone={scrolled || open ? "dark" : "light"} />
         </Link>
 
-        <ul className="hidden items-center gap-10 text-[0.78rem] font-medium uppercase tracking-[0.18em] text-ink-soft md:flex">
+        <ul className={"hidden items-center gap-10 text-[0.78rem] font-medium uppercase tracking-[0.18em] md:flex " + (scrolled ? "text-ink-soft" : "text-background/85")}>
           {NAV_LINKS.map((link) => (
             <li key={link.to}>
               <Link to={link.to} className="nav-link" data-active={pathname === link.to}>
@@ -38,9 +38,17 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="group relative hidden overflow-hidden border border-ink/20 px-6 py-3 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-ink transition-colors duration-500 hover:text-background md:inline-flex"
+            className={`group relative hidden overflow-hidden border px-6 py-3 text-[0.7rem] font-medium uppercase tracking-[0.2em] transition-colors duration-500 md:inline-flex ${
+              scrolled
+                ? "border-ink/20 text-ink hover:text-background"
+                : "border-background/40 text-background hover:text-ink"
+            }`}
           >
-            <span className="absolute inset-0 origin-bottom scale-y-0 bg-ink transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100" />
+            <span
+              className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100 ${
+                scrolled ? "bg-ink" : "bg-gold"
+              }`}
+            />
             <span className="relative z-10">Enquire Now</span>
           </Link>
 
@@ -50,10 +58,10 @@ export function Navbar() {
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           >
             <span
-              className={`h-px w-6 bg-ink transition-transform duration-300 ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+              className={`h-px w-6 transition-transform duration-300 ${scrolled || open ? "bg-ink" : "bg-background"} ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
             />
             <span
-              className={`h-px w-6 bg-ink transition-transform duration-300 ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+              className={`h-px w-6 transition-transform duration-300 ${scrolled || open ? "bg-ink" : "bg-background"} ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
             />
           </button>
         </div>
