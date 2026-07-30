@@ -1,24 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout } from "@/components/site/SiteLayout";
+import { Hero } from "@/components/home/Hero";
+import { StatsBar } from "@/components/home/StatsBar";
+import { AboutTeaser } from "@/components/home/AboutTeaser";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { AmenitiesStrip } from "@/components/home/AmenitiesStrip";
+import { CTABand } from "@/components/home/CTABand";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Yuva Group | Premium Homes & Commercial Builders, Bangalore" },
+      {
+        name: "description",
+        content:
+          "Yuva Group builds premium residential and commercial developments across Bangalore — 20+ years, 25+ projects and 10,000+ happy families.",
+      },
+      { property: "og:title", content: "Yuva Group | Building Better Lives" },
+      {
+        property: "og:description",
+        content: "Premium homes and commercial landmarks crafted with trust and quality in Bangalore.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout>
+      <Hero />
+      <StatsBar />
+      <AboutTeaser />
+      <FeaturedProjects />
+      <AmenitiesStrip />
+      <CTABand />
+    </SiteLayout>
   );
 }
