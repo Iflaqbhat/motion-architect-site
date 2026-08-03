@@ -3,6 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { EnquiryForm } from "@/components/contact/EnquiryForm";
+import { CONTACT } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -11,35 +12,34 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Talk to the Yuva Group team about apartments and commercial spaces in Bangalore. Book a site visit or send an enquiry.",
+          "Talk to the Yuva Group team about apartments in Chandapura, Attibele and Electronic City. Call +91 82 82 82 3395 or schedule a site visit.",
       },
       { property: "og:title", content: "Contact Yuva Group" },
       {
         property: "og:description",
         content: "Book a site visit or send an enquiry to the Yuva Group sales team in Bengaluru.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,
 });
 
-const DETAILS = [
-  { label: "Phone", lines: ["+91 82 82 82 33 95", "+91 82 82 82 33 96"] },
-  { label: "Email", lines: ["info@yuvagroup.in", "sales@yuvagroup.in"] },
-  {
-    label: "Office",
-    lines: ["Manchenahalli Village, Attibele", "Hosur Main Road, Bengaluru 562107"],
-  },
-  { label: "Hours", lines: ["Mon – Sat, 9:30am – 6:30pm", "Sunday site visits by appointment"] },
-];
-
 function Contact() {
+  const DETAILS = [
+    { label: "Phone", lines: CONTACT.phones },
+    { label: "Email", lines: CONTACT.emails },
+    { label: "Official address", lines: [CONTACT.address] },
+    { label: "Hours", lines: CONTACT.hours },
+  ];
+
   return (
     <SiteLayout>
       <PageHeader
         eyebrow="Get in touch"
-        title="We're here to help you find your address"
-        intro="Tell us what you're looking for and our team will come back within one working day — with real availability, not a brochure."
+        title="Stay connected with us"
+        intro="Request additional information or schedule a site visit today — our team responds within one working day with real availability, not a brochure."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24">
@@ -47,7 +47,10 @@ function Contact() {
           <Reveal>
             <div className="space-y-10">
               {DETAILS.map((d) => (
-                <div key={d.label} className="group border-l border-border pl-6 transition-colors duration-500 hover:border-gold">
+                <div
+                  key={d.label}
+                  className="group border-l border-border pl-6 transition-colors duration-500 hover:border-gold"
+                >
                   <p className="eyebrow">{d.label}</p>
                   {d.lines.map((l) => (
                     <p
@@ -64,6 +67,27 @@ function Contact() {
 
           <Reveal delay={0.12}>
             <EnquiryForm />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-sand py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <p className="eyebrow">Visit our experience centre</p>
+            <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
+              Chandapura, <span className="italic text-gold">Hosur Road</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-12 overflow-hidden border border-border">
+              <iframe
+                title="Yuva Group office location map"
+                src={`https://maps.google.com/maps?q=${CONTACT.mapQuery}&output=embed`}
+                loading="lazy"
+                className="h-[26rem] w-full"
+              />
+            </div>
           </Reveal>
         </div>
       </section>

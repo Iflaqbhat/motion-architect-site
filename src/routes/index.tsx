@@ -4,23 +4,28 @@ import { Hero } from "@/components/home/Hero";
 import { StatsBar } from "@/components/home/StatsBar";
 import { AboutTeaser } from "@/components/home/AboutTeaser";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { WhyChoose } from "@/components/home/WhyChoose";
 import { AmenitiesStrip } from "@/components/home/AmenitiesStrip";
+import { Testimonials } from "@/components/home/Testimonials";
 import { CTABand } from "@/components/home/CTABand";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Yuva Group | Premium Homes & Commercial Builders, Bangalore" },
+      { title: "Yuva Group | Builders in Bangalore, Flats Near Electronic City" },
       {
         name: "description",
         content:
-          "Yuva Group builds premium residential and commercial developments across Bangalore — 20+ years, 25+ projects and 10,000+ happy families.",
+          "Yuva Group builds luxury and affordable 1, 2 and 3 BHK flats in Bangalore — Yuva Sunrise, Yuva Utsav and Yuva Sunshine near Electronic City and Chandapura.",
       },
-      { property: "og:title", content: "Yuva Group | Building Better Lives" },
+      { property: "og:title", content: "Yuva Group | Building Your Vision Into Reality" },
       {
         property: "og:description",
-        content: "Premium homes and commercial landmarks crafted with trust and quality in Bangalore.",
+        content:
+          "Premium and affordable apartments in Bangalore, delivered with quality construction and on-time handover.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
@@ -33,7 +38,9 @@ function Index() {
       <StatsBar />
       <AboutTeaser />
       <FeaturedProjects />
+      <WhyChoose />
       <AmenitiesStrip />
+      <Testimonials />
       <CTABand />
     </SiteLayout>
   );
