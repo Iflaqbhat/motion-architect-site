@@ -58,8 +58,9 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.7 }}
           className="mt-8 max-w-md text-base leading-relaxed text-background/75"
         >
-          Premium homes and commercial landmarks crafted with trust, engineering rigour and a
-          vision for a better tomorrow.
+          From premium residential projects to commercial spaces, Yuva Group is a trusted builder
+          in Bangalore delivering quality construction with precision and innovation.
+
         </motion.p>
 
         <motion.div

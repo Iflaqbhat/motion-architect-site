@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
-import { NAV_LINKS, PROJECTS } from "@/data/site";
+import { NAV_LINKS, PROJECTS, CONTACT } from "@/data/site";
 
 export function Footer() {
   return (
@@ -9,9 +9,26 @@ export function Footer() {
         <div className="md:col-span-2">
           <Logo tone="light" />
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/65">
-            Building better lives across South India — residential and commercial developments
-            delivered with trust, quality and a long view.
+            Experience modern living with premium amenities, vibrant spaces and seamless
+            connectivity — apartments across Bengaluru's southern corridor by Yuva Structures Pvt
+            Ltd.
           </p>
+          <address className="mt-8 space-y-1 text-sm not-italic text-background/60">
+            {CONTACT.phones.map((p) => (
+              <p key={p}>
+                <a href={`tel:${p.replace(/\s/g, "")}`} className="nav-link">
+                  {p}
+                </a>
+              </p>
+            ))}
+            {CONTACT.emails.map((e) => (
+              <p key={e}>
+                <a href={`mailto:${e}`} className="nav-link">
+                  {e}
+                </a>
+              </p>
+            ))}
+          </address>
         </div>
 
         <div>
@@ -32,23 +49,21 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm text-background/70">
             {PROJECTS.map((p) => (
               <li key={p.slug}>
-                <Link to="/projects" className="nav-link">
+                <Link to="/projects/$slug" params={{ slug: p.slug }} className="nav-link">
                   {p.name}
                 </Link>
               </li>
             ))}
           </ul>
-          <address className="mt-8 space-y-1 text-sm not-italic text-background/60">
-            <p>+91 82 82 82 33 95</p>
-            <p>info@yuvagroup.in</p>
-            <p>Attibele, Bengaluru 562107</p>
-          </address>
+          <p className="mt-8 max-w-xs text-sm leading-relaxed text-background/60">
+            {CONTACT.address}
+          </p>
         </div>
       </div>
 
       <div className="border-t border-background/12">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-background/45 sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} Yuva Group. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Yuva Structures Pvt Ltd. All rights reserved.</p>
           <p>Privacy Policy · Terms &amp; Conditions</p>
         </div>
       </div>
