@@ -8,6 +8,7 @@ import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { ProjectSpecs } from "@/components/projects/ProjectSpecs";
 import { FloorPlanTable } from "@/components/projects/FloorPlanTable";
 import { PROJECTS, AMENITIES } from "@/data/site";
+import type { Project } from "@/data/site";
 
 export const Route = createFileRoute("/projects/$slug")({
   loader: ({ params }) => {
@@ -57,7 +58,7 @@ function ProjectNotFound() {
 }
 
 function ProjectDetail() {
-  const { project } = Route.useLoaderData();
+  const { project } = Route.useLoaderData() as { project: Project };
   const others = PROJECTS.filter((p) => p.slug !== project.slug);
 
   return (
