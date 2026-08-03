@@ -15,10 +15,11 @@ export function AboutTeaser() {
           </h2>
           <div className="gold-rule mt-7" />
           <p className="mt-7 max-w-lg leading-relaxed text-muted-foreground">
-            For over two decades Yuva Group has been building homes and workplaces across South
-            India. We control design, procurement and construction in-house — which is why our
-            handovers land on time and our buildings age well.
+            Led by Mr. Mahendra Reddy, Yuva Structures Pvt Ltd has spent 15 years building
+            quality, value-driven apartments for modern homebuyers across Bengaluru — around ten
+            projects completed, and more rising along the Hosur Road corridor.
           </p>
+
           <div className="mt-9">
             <GoldButton to="/about" variant="outline">
               Know more about us
