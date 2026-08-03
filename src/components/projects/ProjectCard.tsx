@@ -4,13 +4,14 @@ import type { Project } from "@/data/site";
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
-      to="/projects"
+      to="/projects/$slug"
+      params={{ slug: project.slug }}
       className="group block h-full overflow-hidden bg-card hover-tilt"
     >
       <div className="relative overflow-hidden">
         <img
           src={project.image}
-          alt={project.name}
+          alt={`${project.name} — ${project.location}`}
           loading="lazy"
           width={1200}
           height={900}
@@ -29,7 +30,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="mt-2 text-sm text-muted-foreground">{project.location}</p>
         <p className="mt-1 text-sm text-muted-foreground">{project.type}</p>
         <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
-          <span className="font-display text-xl text-ink">{project.price}</span>
+          <span className="font-display text-xl text-ink">{project.units}</span>
           <span className="text-[0.65rem] uppercase tracking-[0.2em] text-gold transition-transform duration-500 group-hover:translate-x-1">
             Explore &#8594;
           </span>
