@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { CTABand } from "@/components/home/CTABand";
-import { PROJECTS } from "@/data/site";
+import { PROJECTS, COMPLETED_PROJECTS } from "@/data/site";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
@@ -93,6 +93,47 @@ function Projects() {
               </article>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section id="completed" className="bg-sand py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <Reveal>
+            <p className="eyebrow">Delivered</p>
+            <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
+              Completed <span className="italic text-gold">projects</span>
+            </h2>
+            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+              Around ten communities handed over across Bengaluru — occupied, maintained and still
+              performing for the families and investors who bought into them.
+            </p>
+          </Reveal>
+
+          <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {COMPLETED_PROJECTS.map((p, i) => (
+              <Reveal key={p.name} delay={i * 0.08}>
+                <article className="group h-full overflow-hidden bg-card hover-tilt">
+                  <div className="overflow-hidden">
+                    <img
+                      src={p.image}
+                      alt={`${p.name} — completed Yuva Group project`}
+                      loading="lazy"
+                      width={1200}
+                      height={900}
+                      className="h-56 w-full object-cover transition-transform duration-[1.1s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-7">
+                    <h3 className="text-2xl transition-colors duration-400 group-hover:text-gold">
+                      {p.name}
+                    </h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{p.location}</p>
+                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.blurb}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

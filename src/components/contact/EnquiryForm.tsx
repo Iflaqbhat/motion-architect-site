@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { GoldButton } from "../site/GoldButton";
-import { PROJECTS } from "@/data/site";
+import { PROJECTS, CONSENT_NOTE } from "@/data/site";
 
 const field =
   "w-full border-b border-border bg-transparent py-4 text-sm outline-none transition-colors duration-400 placeholder:text-muted-foreground/70 focus:border-gold";
@@ -46,7 +46,9 @@ export function EnquiryForm() {
         <textarea rows={3} placeholder="Your message" className={`${field} border-background/25`} />
       </div>
 
-      <div className="mt-10">
+      <p className="mt-8 text-xs leading-relaxed text-background/45">{CONSENT_NOTE}</p>
+
+      <div className="mt-8">
         <GoldButton type="submit">{sent ? "Enquiry received" : "Submit enquiry"}</GoldButton>
       </div>
 

@@ -8,6 +8,8 @@ import { WhyChoose } from "@/components/home/WhyChoose";
 import { AmenitiesStrip } from "@/components/home/AmenitiesStrip";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CTABand } from "@/components/home/CTABand";
+import { ElectronicCity } from "@/components/home/ElectronicCity";
+import { FAQ } from "@/components/home/FAQ";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,7 +42,9 @@ function Index() {
       <FeaturedProjects />
       <WhyChoose />
       <AmenitiesStrip />
+      <ElectronicCity />
       <Testimonials />
+      <FAQ />
       <CTABand />
     </SiteLayout>
   );
