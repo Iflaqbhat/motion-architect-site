@@ -330,3 +330,125 @@ export const TESTIMONIALS = [
     company: "Small Finance Bank",
   },
 ];
+
+export const COMPLETED_PROJECTS = [
+  {
+    name: "Yuva Residency",
+    location: "Bengaluru",
+    blurb: "An early Yuva community of affordable flats, handed over complete and occupied.",
+    image: interior,
+  },
+  {
+    name: "Yuva Heritage",
+    location: "Bengaluru",
+    blurb: "A compact residential address built to the same published specification as our flagship projects.",
+    image: clubhouse,
+  },
+  {
+    name: "Yuva Lake View",
+    location: "AECS Layout 'B' Block, Singasandra, Bengaluru",
+    blurb: "Delivered on programme with the whole project team kept informed through construction.",
+    image: sunrise,
+  },
+  {
+    name: "Yuva Nest",
+    location: "Bengaluru",
+    blurb: "Affordable flats planned around daylight, ventilation and easy day-to-day living.",
+    image: sunshine,
+  },
+];
+
+export const FAQS = [
+  {
+    q: "Why should I choose Yuva Group when looking for flats near Electronic City?",
+    a: "Yuva Group offers premium and affordable flats in Bangalore designed for modern living. With prime locations, top-class amenities and trusted quality, we make sure every home is a smart investment.",
+  },
+  {
+    q: "What makes Yuva Group a trusted builder for apartments near Electronic City?",
+    a: "Transparent practices, RERA-approved projects, timely delivery and customer-focused design. Our developments are planned around the needs of today's homebuyers, combining functionality, aesthetics and location advantage.",
+  },
+  {
+    q: "Do you offer apartments for sale in Electronic City and nearby areas?",
+    a: "Yes. We offer 1, 2 and 3 BHK apartments near Electronic City, including locations close to Attibele and Hosur Road, with easy access to IT hubs, schools, healthcare and daily conveniences.",
+  },
+  {
+    q: "What amenities can I expect in a Yuva Group apartment?",
+    a: "A clubhouse, landscaped open spaces, gymnasium, children's play area, parking and 24/7 security — amenities designed to support comfortable, safe and family-friendly community living.",
+  },
+  {
+    q: "How well connected are Yuva Group apartments in Electronic City?",
+    a: "Our addresses sit close to major IT parks, key road networks, upcoming metro connectivity and essential civic infrastructure, which keeps daily commuting and errands short.",
+  },
+  {
+    q: "What configurations do Yuva Group flats offer?",
+    a: "Thoughtfully designed 1, 2 and 3 BHK apartments for working professionals, young families and larger households.",
+  },
+  {
+    q: "How can I book a flat with Yuva Group?",
+    a: "Book directly through our sales team or schedule a personalised site visit. Our team also assists with payment plans and home loan support to keep the process smooth.",
+  },
+  {
+    q: "Do Yuva Group projects focus on affordability?",
+    a: "Yes — we offer high-quality living spaces at competitive prices, balancing affordability with premium lifestyle features.",
+  },
+  {
+    q: "Why is Yuva Group a trusted choice near Electronic City and Attibele?",
+    a: "A strong focus on transparency, timely delivery and customer satisfaction has earned us the trust of homebuyers across Electronic City, Attibele and the Hosur Road corridor.",
+  },
+];
+
+export const CAREERS = {
+  intro:
+    "At Yuva Group we believe in empowering talent and nurturing potential. Join a team where your ideas are valued and your growth is our priority — and be part of an organisation making a real impact on how Bengaluru lives.",
+  openings: [
+    {
+      title: "Executive / Sr. Executive — Sales",
+      qualification: "Any Degree / MBA",
+      desired: "Strong communication skills",
+      experience: "2+ years",
+    },
+    {
+      title: "Engineer / Sr. Engineer",
+      qualification: "BE — Civil",
+      desired: "Site execution and quality control",
+      experience: "4+ years",
+    },
+    {
+      title: "Executive / Sr. Executive — CRM",
+      qualification: "Any Degree / MBA",
+      desired: "Customer relationship management",
+      experience: "3+ years",
+    },
+    {
+      title: "Sr. Executive — Accounts",
+      qualification: "B.Com / M.Com / MBA",
+      desired: "Exposure to core accounting processes",
+      experience: "2+ years",
+    },
+  ],
+};
+
+export const WHATSAPP = [
+  { label: "82 82 82 3395", href: "https://wa.me/918282823395" },
+  { label: "82 82 82 3396", href: "https://wa.me/918282823396" },
+];
+
+export const CONSENT_NOTE =
+  "By submitting this form, I consent to receive communications from Yuva Group through WhatsApp, SMS, email, phone calls and other channels, even if my number is registered under DND/NDNC.";
+
+export const ELECTRONIC_CITY = {
+  eyebrow: "Affordable & modern living spaces",
+  title: "Premium apartments for sale in Electronic City",
+  copy: [
+    "Yuva Group offers premium apartments for sale in Electronic City, one of Bengaluru's most preferred residential and IT-driven locations. These homes are designed for comfortable modern living with well-planned layouts, quality construction and essential lifestyle amenities suited to families and working professionals — with easy access to offices, schools and daily conveniences.",
+    "We focus on value-driven apartments with modern amenities that meet today's homebuyer expectations. Whether you are a first-time buyer or an investor, our apartments near Electronic City and Attibele offer long-term value, strong rental demand and a well-connected community living experience.",
+  ],
+};
+
+export const LEADING_BUILDERS = {
+  title: "Leading builders in Bangalore for residential & commercial projects",
+  copy: [
+    "Yuva Group is recognised as one of the leading builders in Bangalore, known for quality construction, transparent practices and timely project delivery. With years of experience across residential and commercial real estate development, the group has built a reputation for thoughtfully planned spaces that combine modern design with long-term value.",
+    "From premium apartments and gated communities near Electronic City to well-located commercial and mixed-use developments, every project reflects a commitment to quality standards, sustainability and attention to detail — enduring value for homeowners and investors alike.",
+  ],
+};
