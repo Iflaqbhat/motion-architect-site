@@ -10,6 +10,8 @@ export const NAV_LINKS = [
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
   { to: "/amenities", label: "Amenities" },
+  { to: "/testimonials", label: "Testimonials" },
+  { to: "/careers", label: "Careers" },
   { to: "/contact", label: "Contact" },
 ];
 
