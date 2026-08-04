@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
-import { NAV_LINKS, PROJECTS, CONTACT } from "@/data/site";
+import { NAV_LINKS, PROJECTS, CONTACT, WHATSAPP } from "@/data/site";
 
 export function Footer() {
   return (
@@ -29,6 +29,23 @@ export function Footer() {
               </p>
             ))}
           </address>
+
+          <div className="mt-8">
+            <h3 className="eyebrow">WhatsApp us</h3>
+            <div className="mt-3 flex flex-wrap gap-4 text-sm text-background/70">
+              {WHATSAPP.map((w) => (
+                <a
+                  key={w.href}
+                  href={w.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="nav-link"
+                >
+                  {w.label}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div>
@@ -41,6 +58,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/privacy-policy" className="nav-link">
+                Privacy Policy
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -54,6 +76,11 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/projects" hash="completed" className="nav-link">
+                Completed Projects
+              </Link>
+            </li>
           </ul>
           <p className="mt-8 max-w-xs text-sm leading-relaxed text-background/60">
             {CONTACT.address}
@@ -64,7 +91,9 @@ export function Footer() {
       <div className="border-t border-background/12">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-6 py-6 text-xs text-background/45 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} Yuva Structures Pvt Ltd. All rights reserved.</p>
-          <p>Privacy Policy · Terms &amp; Conditions</p>
+          <Link to="/privacy-policy" className="nav-link">
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
