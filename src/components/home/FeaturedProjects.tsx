@@ -26,7 +26,7 @@ export function FeaturedProjects() {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-12">
+        <div className="mt-20 grid grid-cols-1 items-start gap-16 md:grid-cols-12">
           {PROJECTS.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.08} className={offsets[i % offsets.length]}>
               <ProjectCard project={p} index={i} />
