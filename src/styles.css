@@ -35,7 +35,7 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Outfit", system-ui, sans-serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
 }
 
