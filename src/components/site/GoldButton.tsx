@@ -4,18 +4,18 @@ import type { ReactNode } from "react";
 type Variant = "gold" | "outline" | "ghostLight";
 
 const base =
-  "group relative inline-flex items-center gap-3 overflow-hidden px-7 py-3.5 text-[0.72rem] font-medium uppercase tracking-[0.2em] transition-colors duration-500";
+  "group relative inline-flex items-center gap-3 overflow-hidden px-7 py-3.5 text-[0.65rem] font-bold uppercase tracking-[0.24em] transition-colors duration-500";
 
 const styles: Record<Variant, string> = {
-  gold: "bg-gold text-ink hover:text-ink",
-  outline: "border border-ink/25 text-ink hover:text-background",
-  ghostLight: "border border-background/35 text-background hover:text-ink",
+  gold: "bg-ink text-background",
+  outline: "border border-ink text-ink hover:text-background",
+  ghostLight: "border border-background/40 text-background hover:text-ink",
 };
 
 const fills: Record<Variant, string> = {
-  gold: "bg-gold-soft",
+  gold: "bg-foreground",
   outline: "bg-ink",
-  ghostLight: "bg-gold",
+  ghostLight: "bg-background",
 };
 
 export function GoldButton({
@@ -34,7 +34,7 @@ export function GoldButton({
   const inner = (
     <>
       <span
-        className={`absolute inset-0 origin-left scale-x-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100 ${fills[variant]}`}
+        className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100 ${fills[variant]}`}
       />
       <span className="relative z-10">{children}</span>
       <span className="relative z-10 transition-transform duration-500 group-hover:translate-x-1.5">

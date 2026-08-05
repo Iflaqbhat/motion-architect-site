@@ -35,40 +35,43 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
-  --font-display: "Outfit", system-ui, sans-serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Barlow Condensed", system-ui, sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.22 0.03 258);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.22 0.03 258);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.22 0.03 258);
-  --primary: oklch(0.26 0.055 262);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.95 0.012 85);
-  --secondary-foreground: oklch(0.26 0.055 262);
-  --muted: oklch(0.955 0.008 85);
-  --muted-foreground: oklch(0.52 0.02 258);
-  --accent: oklch(0.74 0.1 82);
-  --accent-foreground: oklch(0.22 0.03 258);
+  --radius: 0rem;
+
+  /* Paper & Ink */
+  --background: oklch(0.965 0.005 85); /* #f5f3ee paper */
+  --foreground: oklch(0.32 0 0); /* #2d2d2d */
+  --card: oklch(0.93 0.005 85); /* #e8e4dd surface */
+  --card-foreground: oklch(0.32 0 0);
+  --popover: oklch(0.965 0.005 85);
+  --popover-foreground: oklch(0.32 0 0);
+  --primary: oklch(0.16 0 0); /* #0d0d0d ink */
+  --primary-foreground: oklch(0.965 0.005 85);
+  --secondary: oklch(0.93 0.005 85);
+  --secondary-foreground: oklch(0.16 0 0);
+  --muted: oklch(0.93 0.005 85);
+  --muted-foreground: oklch(0.46 0.004 85);
+  --accent: oklch(0.16 0 0);
+  --accent-foreground: oklch(0.965 0.005 85);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.9 0.012 85);
-  --input: oklch(0.9 0.012 85);
-  --ring: oklch(0.74 0.1 82);
+  --border: oklch(0.86 0.005 85);
+  --input: oklch(0.86 0.005 85);
+  --ring: oklch(0.16 0 0);
 
-  --ink: oklch(0.21 0.045 262);
-  --ink-soft: oklch(0.3 0.05 262);
-  --gold: oklch(0.74 0.1 82);
-  --gold-soft: oklch(0.85 0.07 85);
-  --sand: oklch(0.96 0.012 85);
+  --ink: oklch(0.16 0 0);
+  --ink-soft: oklch(0.32 0 0);
+  /* accent = warm graphite: legible on both paper and ink grounds */
+  --gold: oklch(0.58 0.015 70);
+  --gold-soft: oklch(0.75 0.012 75);
+  --sand: oklch(0.93 0.005 85);
 
-  --shadow-lift: 0 24px 60px -30px oklch(0.21 0.045 262 / 0.45);
-  --gradient-ink: linear-gradient(140deg, oklch(0.21 0.045 262), oklch(0.28 0.06 265));
+  --shadow-lift: 0 26px 60px -32px oklch(0.16 0 0 / 0.5);
+  --gradient-ink: linear-gradient(150deg, oklch(0.14 0 0), oklch(0.22 0 0));
 }
 
 @layer base {
@@ -83,66 +86,85 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  ::selection {
+    background: var(--ink);
+    color: var(--background);
+  }
+
   h1,
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.03em;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 0.88;
+    color: var(--ink);
   }
 }
 
 @utility eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.24em;
+  font-size: 0.65rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--gold);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 @utility ink-panel {
   background: var(--gradient-ink);
-  color: oklch(0.97 0.01 85);
+  color: oklch(0.965 0.005 85);
 }
 
-/* Navigation link: gold sweep underline + lift */
+/* Editorial nav link: strike-through + rising rule */
 @utility nav-link {
   position: relative;
   display: inline-block;
-  padding-block: 0.35rem;
+  padding-block: 0.3rem;
   transition:
-    color 0.35s ease,
-    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    color 0.3s ease,
+    opacity 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 1px;
+    height: 2px;
     width: 100%;
-    background: var(--gold);
+    background: currentColor;
     transform: scaleX(0);
-    transform-origin: right;
+    transform-origin: left;
     transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  &:hover::after,
-  &[data-active="true"]::after {
+  &:hover::before {
     transform: scaleX(1);
     transform-origin: left;
   }
 
-  &:hover {
-    color: var(--gold);
-    transform: translateY(-1px);
+  &[data-active="true"]::after {
+    transform: scaleX(1);
   }
 }
 
 @utility gold-rule {
-  height: 1px;
+  height: 2px;
   width: 3.5rem;
-  background: var(--gold);
+  background: var(--ink);
 }
 
 @utility hover-tilt {
@@ -153,5 +175,67 @@
   &:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-lift);
+  }
+}
+
+/* Outlined display type */
+@utility text-outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink);
+}
+
+@utility text-outline-light {
+  color: transparent;
+  -webkit-text-stroke: 1.5px oklch(0.965 0.005 85);
+}
+
+/* Drafting-table plate: offset hairline frame behind an element */
+@utility plate-frame {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--ink);
+    transform: translate(1.25rem, 1.25rem);
+    pointer-events: none;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+  }
+
+  &:hover::after {
+    transform: translate(0.5rem, 0.5rem);
+  }
+}
+
+@utility index-num {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.8;
+  color: color-mix(in oklab, var(--ink) 12%, transparent);
+}
+
+@utility vertical-label {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.7em;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: color-mix(in oklab, var(--ink) 40%, transparent);
+}
+
+@utility marquee-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: marquee-scroll 38s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

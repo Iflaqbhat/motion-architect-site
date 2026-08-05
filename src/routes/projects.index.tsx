@@ -65,7 +65,7 @@ function Projects() {
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {list.map((p, i) => (
             <Reveal key={p.slug} delay={i * 0.08}>
-              <ProjectCard project={p} />
+              <ProjectCard project={p} index={i} />
             </Reveal>
           ))}
           {list.length === 0 && (
