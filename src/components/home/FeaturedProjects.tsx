@@ -3,32 +3,36 @@ import { GoldButton } from "../site/GoldButton";
 import { ProjectCard } from "../projects/ProjectCard";
 import { PROJECTS } from "@/data/site";
 
+const offsets = ["md:col-span-7", "md:col-span-5 md:mt-32", "md:col-span-6 md:col-start-4"];
+
 export function FeaturedProjects() {
   return (
-    <section className="bg-sand py-28">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-card py-28">
+      <div className="mx-auto max-w-[110rem] px-6 md:px-12">
         <Reveal>
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <p className="eyebrow">Our projects</p>
-              <h2 className="mt-4 text-4xl leading-tight md:text-5xl">
-                Homes designed
-                <br />
-                for your lifestyle
-              </h2>
+          <div className="flex flex-wrap items-end justify-between gap-8 border-b-2 border-ink pb-8">
+            <h2 className="text-7xl md:text-9xl">Projects</h2>
+            <div className="text-right">
+              <p className="text-[0.6rem] font-bold uppercase tracking-[0.24em]">
+                Current availability
+              </p>
+              <p className="mt-2 text-sm text-muted-foreground">Ongoing collection</p>
             </div>
-            <GoldButton to="/projects" variant="outline">
-              View all projects
-            </GoldButton>
           </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="mt-20 grid grid-cols-1 gap-16 md:grid-cols-12">
           {PROJECTS.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 0.1}>
-              <ProjectCard project={p} />
+            <Reveal key={p.slug} delay={i * 0.08} className={offsets[i % offsets.length]}>
+              <ProjectCard project={p} index={i} />
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-20">
+          <GoldButton to="/projects" variant="outline">
+            View all projects
+          </GoldButton>
         </div>
       </div>
     </section>
