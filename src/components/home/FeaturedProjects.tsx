@@ -3,7 +3,12 @@ import { GoldButton } from "../site/GoldButton";
 import { ProjectCard } from "../projects/ProjectCard";
 import { PROJECTS } from "@/data/site";
 
-const offsets = ["md:col-span-7", "md:col-span-5 md:mt-32", "md:col-span-6 md:col-start-4"];
+const offsets = [
+  "md:col-span-7",
+  "md:col-span-5 md:mt-24",
+  "md:col-span-6 md:col-start-4 md:-mt-16",
+];
+
 
 export function FeaturedProjects() {
   return (
