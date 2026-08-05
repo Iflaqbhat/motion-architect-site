@@ -3,94 +3,80 @@ import { useRef } from "react";
 import hero from "@/assets/hero-tower.jpg";
 import { GoldButton } from "../site/GoldButton";
 
-const words = ["Building", "Better", "Lives"];
+const lines = ["Building", "Better", "Lives"];
 
 export function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const fade = useTransform(scrollYProgress, [0, 1], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "12%"]);
 
   return (
-    <section ref={ref} className="relative h-[100svh] min-h-[640px] overflow-hidden">
-      <motion.div style={{ y }} className="absolute inset-0 -z-10">
-        <img
-          src={hero}
-          alt="Illuminated Yuva Group residential towers at dusk"
-          width={1920}
-          height={1088}
-          className="h-[118%] w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(100deg,oklch(0.18_0.04_262/0.92)_0%,oklch(0.18_0.04_262/0.6)_45%,transparent_85%)]" />
-      </motion.div>
+    <section ref={ref} className="relative overflow-hidden bg-background px-6 pt-36 md:px-12">
+      <div className="mx-auto grid max-w-[110rem] grid-cols-12">
+        <div className="col-span-12 z-20 lg:col-span-10">
+          <motion.p
+            initial={{ opacity: 0, x: -16 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="eyebrow mb-6"
+          >
+            Yuva Structures Pvt Ltd — Bengaluru — Est. 2010
+          </motion.p>
 
-      <motion.div
-        style={{ opacity: fade }}
-        className="mx-auto flex h-full max-w-7xl flex-col justify-center px-6 pt-24"
-      >
-        <motion.p
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="eyebrow"
-        >
-          Welcome to Yuva Group
-        </motion.p>
-
-        <h1 className="mt-6 text-6xl leading-[0.95] text-background sm:text-7xl md:text-8xl">
-          {words.map((w, i) => (
-            <span key={w} className="block overflow-hidden">
-              <motion.span
-                className="block"
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, delay: 0.25 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
-              >
-                {i === 2 ? <span className="text-gold">{w}</span> : w}
-              </motion.span>
-            </span>
-          ))}
-        </h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.7 }}
-          className="mt-8 max-w-md text-base leading-relaxed text-background/75"
-        >
-          From premium residential projects to commercial spaces, Yuva Group is a trusted builder
-          in Bangalore delivering quality construction with precision and innovation.
-
-        </motion.p>
+          <h1 className="text-[16vw] leading-[0.8] tracking-tight md:text-[13vw]">
+            {lines.map((w, i) => (
+              <span key={w} className="block overflow-hidden">
+                <motion.span
+                  className={`block ${i === 1 ? "text-outline ml-[10vw]" : ""}`}
+                  initial={{ y: "110%" }}
+                  animate={{ y: 0 }}
+                  transition={{ duration: 1, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {w}
+                </motion.span>
+              </span>
+            ))}
+          </h1>
+        </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.85 }}
-          className="mt-10 flex flex-wrap gap-4"
+          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="z-10 col-span-12 -mt-[6vw] lg:col-span-7 lg:col-start-6"
         >
-          <GoldButton to="/projects">Explore Projects</GoldButton>
-          <GoldButton to="/about" variant="ghostLight">
-            Our Story
-          </GoldButton>
-        </motion.div>
-      </motion.div>
+          <div className="aspect-[16/10] overflow-hidden bg-card">
+            <motion.img
+              style={{ y }}
+              src={hero}
+              alt="Illuminated Yuva Group residential towers at dusk"
+              width={1920}
+              height={1088}
+              className="h-[112%] w-full object-cover contrast-125 grayscale transition-[filter] duration-[1.2s] hover:grayscale-0"
+            />
+          </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex"
-      >
-        <span className="text-[0.6rem] uppercase tracking-[0.35em] text-background/55">Scroll</span>
-        <span className="h-14 w-px overflow-hidden bg-background/25">
-          <motion.span
-            className="block h-6 w-px bg-gold"
-            animate={{ y: [-24, 56] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          />
-        </span>
-      </motion.div>
+          <div className="mt-6 flex items-end justify-between gap-8 border-b-2 border-ink pb-8">
+            <div className="max-w-sm">
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.24em]">
+                Strategic Development
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Premium and affordable 1, 2 and 3 BHK homes along Bengaluru&rsquo;s Hosur Road
+                corridor — built with precision, delivered on time.
+              </p>
+            </div>
+            <span className="index-num shrink-0">01</span>
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mx-auto mt-12 flex max-w-[110rem] flex-wrap gap-4 pb-24">
+        <GoldButton to="/projects">Explore Projects</GoldButton>
+        <GoldButton to="/about" variant="outline">
+          Our Story
+        </GoldButton>
+      </div>
     </section>
   );
 }
