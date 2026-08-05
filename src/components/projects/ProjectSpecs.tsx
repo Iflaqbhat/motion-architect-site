@@ -7,7 +7,7 @@ export function ProjectSpecs({ specs }: { specs: Spec[] }) {
       <Reveal>
         <p className="eyebrow">Specifications</p>
         <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
-          Written down before we <span className="italic text-gold">pour concrete</span>
+          Written down before we <span className="text-gold">pour concrete</span>
         </h2>
       </Reveal>
 

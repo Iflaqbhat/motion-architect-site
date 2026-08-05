@@ -101,7 +101,7 @@ function Projects() {
           <Reveal>
             <p className="eyebrow">Delivered</p>
             <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-              Completed <span className="italic text-gold">projects</span>
+              Completed <span className="text-gold">projects</span>
             </h2>
             <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
               Around ten communities handed over across Bengaluru — occupied, maintained and still

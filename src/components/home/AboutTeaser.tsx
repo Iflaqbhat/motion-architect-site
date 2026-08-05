@@ -11,7 +11,7 @@ export function AboutTeaser() {
           <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
             Spaces that inspire.
             <br />
-            <span className="italic text-gold">Quality that lasts.</span>
+            <span className="text-gold">Quality that lasts.</span>
           </h2>
           <div className="gold-rule mt-7" />
           <p className="mt-7 max-w-lg leading-relaxed text-muted-foreground">
