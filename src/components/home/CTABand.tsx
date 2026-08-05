@@ -7,7 +7,7 @@ export function CTABand() {
       <Reveal className="mx-auto max-w-4xl px-6 text-center">
         <p className="eyebrow">Let's build together</p>
         <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-          Ready to make a Yuva address <span className="italic text-gold">your own?</span>
+          Ready to make a Yuva address <span className="text-gold">your own?</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl leading-relaxed text-muted-foreground">
           Book a site visit and walk the project with our team — no pressure, just honest answers.

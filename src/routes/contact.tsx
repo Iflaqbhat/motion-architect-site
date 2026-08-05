@@ -76,7 +76,7 @@ function Contact() {
           <Reveal>
             <p className="eyebrow">Visit our experience centre</p>
             <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
-              Chandapura, <span className="italic text-gold">Hosur Road</span>
+              Chandapura, <span className="text-gold">Hosur Road</span>
             </h2>
           </Reveal>
           <Reveal delay={0.1}>

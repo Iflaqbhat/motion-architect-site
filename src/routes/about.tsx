@@ -60,7 +60,7 @@ function About() {
           <Reveal delay={0.1}>
             <p className="eyebrow">Welcome to Yuva Structures Pvt Ltd</p>
             <h2 className="mt-5 text-4xl leading-tight">
-              Luxury and affordable flats <span className="italic text-gold">in Bangalore</span>
+              Luxury and affordable flats <span className="text-gold">in Bangalore</span>
             </h2>
             <p className="mt-7 leading-relaxed text-muted-foreground">
               Yuva Group began by developing quality, value-driven apartments designed for modern

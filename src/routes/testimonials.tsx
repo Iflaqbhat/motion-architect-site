@@ -61,7 +61,7 @@ function TestimonialsPage() {
           <Reveal>
             <p className="eyebrow">We are happy for our achievement</p>
             <h2 className="mt-5 text-4xl leading-tight text-background md:text-5xl">
-              Numbers behind the <span className="italic text-gold">trust</span>
+              Numbers behind the <span className="text-gold">trust</span>
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-px bg-background/12 sm:grid-cols-2 lg:grid-cols-4">

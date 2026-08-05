@@ -163,7 +163,7 @@ function ProjectDetail() {
           <Reveal>
             <p className="eyebrow">Amenities</p>
             <h2 className="mt-5 text-4xl text-background md:text-5xl">
-              Crafted for your <span className="italic text-gold">comfort</span>
+              Crafted for your <span className="text-gold">comfort</span>
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-px bg-background/12 sm:grid-cols-2 lg:grid-cols-3">

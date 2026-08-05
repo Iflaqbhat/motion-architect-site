@@ -10,7 +10,7 @@ export function AmenitiesStrip() {
         <Reveal>
           <p className="eyebrow">Amenities crafted for your lifestyle</p>
           <h2 className="mt-5 text-4xl leading-tight text-background md:text-5xl">
-            Lifestyle, <span className="italic text-gold">elevated</span>
+            Lifestyle, <span className="text-gold">elevated</span>
           </h2>
           <p className="mt-6 max-w-md leading-relaxed text-background/65">
             Every Yuva community is planned around shared life — spaces to swim, train, gather and

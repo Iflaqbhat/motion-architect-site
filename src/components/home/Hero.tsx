@@ -46,7 +46,7 @@ export function Hero() {
                 animate={{ y: 0 }}
                 transition={{ duration: 1, delay: 0.25 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
               >
-                {i === 2 ? <span className="italic text-gold">{w}</span> : w}
+                {i === 2 ? <span className="text-gold">{w}</span> : w}
               </motion.span>
             </span>
           ))}

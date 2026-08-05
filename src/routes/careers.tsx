@@ -41,7 +41,7 @@ function Careers() {
         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <Reveal>
             <h2 className="text-4xl leading-tight md:text-5xl">
-              Shape the future <span className="italic text-gold">with us</span>
+              Shape the future <span className="text-gold">with us</span>
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">{CAREERS.intro}</p>
             <div className="mt-10 overflow-hidden">

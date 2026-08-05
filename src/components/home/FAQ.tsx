@@ -11,7 +11,7 @@ export function FAQ() {
       <Reveal>
         <p className="eyebrow">About flats for sale in Bangalore</p>
         <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-          Frequently asked <span className="italic text-gold">questions</span>
+          Frequently asked <span className="text-gold">questions</span>
         </h2>
       </Reveal>
 

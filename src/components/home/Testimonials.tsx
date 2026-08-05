@@ -8,7 +8,7 @@ export function Testimonials() {
         <Reveal>
           <p className="eyebrow">Testimonials</p>
           <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-            Check what our <span className="italic text-gold">clients say</span>
+            Check what our <span className="text-gold">clients say</span>
           </h2>
         </Reveal>
 

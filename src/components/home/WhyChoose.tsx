@@ -8,7 +8,7 @@ export function WhyChoose() {
         <p className="eyebrow">Why choose us</p>
         <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
           Leading builders in Bangalore for{" "}
-          <span className="italic text-gold">residential & commercial</span> projects
+          <span className="text-gold">residential & commercial</span> projects
         </h2>
       </Reveal>
 
