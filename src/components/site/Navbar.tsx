@@ -12,22 +12,27 @@ export function Navbar() {
 
   useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 40));
 
+  const links = NAV_LINKS.filter((l) => l.to !== "/contact");
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 py-3 shadow-[0_1px_0_0_var(--color-border)] backdrop-blur-xl"
-          : "bg-transparent py-6"
+          ? "border-ink/10 bg-background/85 py-3 backdrop-blur-xl"
+          : "border-transparent bg-background/60 py-6 backdrop-blur-sm"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6">
-        <Link to="/" onClick={() => setOpen(false)}>
-          <Logo tone={scrolled || open ? "dark" : "light"} />
+      <nav className="mx-auto flex max-w-[110rem] items-end justify-between px-6 md:px-12">
+        <Link to="/" onClick={() => setOpen(false)} className="shrink-0">
+          <Logo />
         </Link>
 
-        <ul className={"hidden items-center gap-10 text-[0.78rem] font-medium uppercase tracking-[0.18em] md:flex " + (scrolled ? "text-ink-soft" : "text-background/85")}>
-          {NAV_LINKS.map((link) => (
-            <li key={link.to}>
+        <ul className="hidden items-end gap-8 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-ink md:flex">
+          {links.map((link, i) => (
+            <li key={link.to} className="flex items-baseline gap-1.5">
+              <span className="font-display text-[0.65rem] text-ink/25">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <Link to={link.to} className="nav-link" data-active={pathname === link.to}>
                 {link.label}
               </Link>
@@ -38,18 +43,10 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className={`group relative hidden overflow-hidden border px-6 py-3 text-[0.7rem] font-medium uppercase tracking-[0.2em] transition-colors duration-500 md:inline-flex ${
-              scrolled
-                ? "border-ink/20 text-ink hover:text-background"
-                : "border-background/40 text-background hover:text-ink"
-            }`}
+            className="group relative hidden overflow-hidden bg-ink px-6 py-2.5 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-background md:inline-flex"
           >
-            <span
-              className={`absolute inset-0 origin-bottom scale-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100 ${
-                scrolled ? "bg-ink" : "bg-gold"
-              }`}
-            />
-            <span className="relative z-10">Enquire Now</span>
+            <span className="absolute inset-0 origin-bottom scale-y-0 bg-foreground transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100" />
+            <span className="relative z-10">Enquire</span>
           </Link>
 
           <button
@@ -58,10 +55,10 @@ export function Navbar() {
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 md:hidden"
           >
             <span
-              className={`h-px w-6 transition-transform duration-300 ${scrolled || open ? "bg-ink" : "bg-background"} ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+              className={`h-0.5 w-7 bg-ink transition-transform duration-300 ${open ? "translate-y-[4px] rotate-45" : ""}`}
             />
             <span
-              className={`h-px w-6 transition-transform duration-300 ${scrolled || open ? "bg-ink" : "bg-background"} ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+              className={`h-0.5 w-7 bg-ink transition-transform duration-300 ${open ? "-translate-y-[4px] -rotate-45" : ""}`}
             />
           </button>
         </div>
@@ -74,17 +71,20 @@ export function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-border bg-background md:hidden"
+            className="overflow-hidden border-t border-ink/10 bg-background md:hidden"
           >
-            <ul className="flex flex-col px-6 py-4">
-              {NAV_LINKS.map((link) => (
-                <li key={link.to} className="border-b border-border/60 last:border-0">
+            <ul className="flex flex-col px-6 py-2">
+              {NAV_LINKS.map((link, i) => (
+                <li key={link.to} className="border-b border-ink/10 last:border-0">
                   <Link
                     to={link.to}
                     onClick={() => setOpen(false)}
-                    className="block py-4 font-display text-2xl text-ink"
+                    className="flex items-baseline gap-4 py-4"
                   >
-                    {link.label}
+                    <span className="font-display text-sm text-ink/25">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-display text-4xl text-ink">{link.label}</span>
                   </Link>
                 </li>
               ))}
