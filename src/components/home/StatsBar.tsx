@@ -29,21 +29,25 @@ export function StatsBar() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.12} className="relative md:w-1/2">
-          <div className="relative z-10 ink-panel p-10 md:-translate-y-10 md:translate-x-6 lg:p-14">
-            <p className="text-lg font-light leading-relaxed text-background/90">
-              &ldquo;A home is the largest decision most families ever make. Our job is to make
-              that decision feel safe — honest pricing, honest engineering, honest timelines.&rdquo;
-            </p>
-            <div className="mt-8 flex items-center gap-4">
-              <span className="h-px w-12 bg-background" />
-              <span className="text-[0.6rem] font-bold uppercase tracking-[0.24em] text-background/80">
-                Mr. Mahendra Reddy — Founder
-              </span>
+        <Reveal delay={0.12} className="md:w-1/2">
+          <div className="relative md:-translate-y-10">
+            <div className="relative z-10 ink-panel p-10 lg:p-14">
+              <p className="text-lg font-light leading-relaxed text-background/90">
+                &ldquo;A home is the largest decision most families ever make. Our job is to make
+                that decision feel safe — honest pricing, honest engineering, honest
+                timelines.&rdquo;
+              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <span className="h-px w-12 bg-background" />
+                <span className="text-[0.6rem] font-bold uppercase tracking-[0.24em] text-background/80">
+                  Mr. Mahendra Reddy — Founder
+                </span>
+              </div>
             </div>
+            <div className="pointer-events-none absolute inset-0 hidden border border-ink md:block md:translate-x-6 md:translate-y-6" />
           </div>
-          <div className="pointer-events-none absolute inset-0 border border-ink md:translate-y-0 md:translate-x-12" />
         </Reveal>
+
       </div>
     </section>
   );
