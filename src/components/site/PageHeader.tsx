@@ -10,19 +10,16 @@ export function PageHeader({
   intro: string;
 }) {
   return (
-    <section className="ink-panel relative overflow-hidden pt-40 pb-24">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 -top-24 h-[28rem] w-[28rem] rounded-full bg-gold/12 blur-3xl"
-      />
-      <div className="relative mx-auto max-w-7xl px-6">
+    <section className="relative overflow-hidden bg-background pb-16 pt-40">
+      <div className="mx-auto max-w-[110rem] px-6 md:px-12">
         <Reveal>
           <p className="eyebrow">{eyebrow}</p>
-          <h1 className="mt-5 max-w-3xl text-5xl leading-[1.05] text-background md:text-7xl">
-            {title}
-          </h1>
-          <div className="gold-rule mt-8" />
-          <p className="mt-8 max-w-xl text-base leading-relaxed text-background/70">{intro}</p>
+          <h1 className="mt-6 max-w-5xl text-7xl leading-[0.85] md:text-[10vw]">{title}</h1>
+          <div className="mt-10 grid gap-8 border-t-2 border-ink pt-8 md:grid-cols-12">
+            <p className="text-sm leading-relaxed text-muted-foreground md:col-span-5 md:col-start-7">
+              {intro}
+            </p>
+          </div>
         </Reveal>
       </div>
     </section>
