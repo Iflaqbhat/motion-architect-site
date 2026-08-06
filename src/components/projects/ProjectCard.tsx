@@ -15,7 +15,7 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
           loading="lazy"
           width={1200}
           height={900}
-          className="h-80 w-full object-cover contrast-110 grayscale transition-all duration-[1.1s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 group-hover:grayscale-0"
+          className="h-80 w-full object-cover saturate-105 transition-all duration-[1.1s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105 "
         />
         <span className="absolute left-0 top-0 bg-ink px-4 py-2 text-[0.58rem] font-bold uppercase tracking-[0.24em] text-background">
           {project.status}

@@ -1,4 +1,4 @@
-import pool from "@/assets/amenity-pool.jpg";
+import pool from "@/assets/site-5.jpg";
 import { Reveal } from "../site/Reveal";
 import { GoldButton } from "../site/GoldButton";
 import { AMENITIES } from "@/data/site";

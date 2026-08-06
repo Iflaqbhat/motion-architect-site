@@ -1,7 +1,7 @@
 import { Reveal } from "../site/Reveal";
 import { GoldButton } from "../site/GoldButton";
 import { ELECTRONIC_CITY, LEADING_BUILDERS } from "@/data/site";
-import interior from "@/assets/interior.jpg";
+import interior from "@/assets/site-3.jpg";
 
 export function ElectronicCity() {
   return (

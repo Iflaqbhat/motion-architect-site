@@ -5,7 +5,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CTABand } from "@/components/home/CTABand";
 import { Testimonials } from "@/components/home/Testimonials";
 import { CAPABILITIES, STATS, LEADERSHIP, TEAM } from "@/data/site";
-import interior from "@/assets/interior.jpg";
+import interior from "@/assets/site-3.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({

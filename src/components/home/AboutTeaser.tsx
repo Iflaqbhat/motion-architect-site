@@ -1,6 +1,7 @@
-import clubhouse from "@/assets/clubhouse.jpg";
+import clubhouse from "@/assets/site-2.jpg";
 import { Reveal } from "../site/Reveal";
 import { GoldButton } from "../site/GoldButton";
+import { SplitText, ScrollFadeText } from "../site/ScrollText";
 
 export function AboutTeaser() {
   return (
@@ -9,16 +10,18 @@ export function AboutTeaser() {
         <Reveal>
           <p className="eyebrow">About us</p>
           <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
-            Spaces that inspire.
+            <SplitText text="Spaces that inspire." />
             <br />
-            <span className="text-gold">Quality that lasts.</span>
+            <span className="text-gold">
+              <SplitText text="Quality that lasts." delay={0.15} />
+            </span>
           </h2>
           <div className="gold-rule mt-7" />
-          <p className="mt-7 max-w-lg leading-relaxed text-muted-foreground">
-            Led by Mr. Mahendra Reddy, Yuva Structures Pvt Ltd has spent 15 years building
-            quality, value-driven apartments for modern homebuyers across Bengaluru — around ten
-            projects completed, and more rising along the Hosur Road corridor.
-          </p>
+          <ScrollFadeText
+            className="mt-7 max-w-lg leading-relaxed text-muted-foreground"
+            text="Led by Mr. Mahendra Reddy, Yuva Structures Pvt Ltd has spent 15 years building quality, value-driven apartments for modern homebuyers across Bengaluru — around ten projects completed, and more rising along the Hosur Road corridor."
+          />
+
 
           <div className="mt-9">
             <GoldButton to="/about" variant="outline">
@@ -35,7 +38,7 @@ export function AboutTeaser() {
               loading="lazy"
               width={1400}
               height={1000}
-              className="h-[30rem] w-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+              className="h-[30rem] w-full object-cover smooth-media group-hover:scale-110"
             />
             <div className="ink-panel absolute bottom-0 right-0 max-w-xs p-7">
               <p className="eyebrow">Our vision</p>
