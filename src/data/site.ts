@@ -1,9 +1,9 @@
-import sunrise from "@/assets/project-sunrise.jpg";
-import utsav from "@/assets/project-utsav.jpg";
-import sunshine from "@/assets/project-sunshine.jpg";
-import clubhouse from "@/assets/clubhouse.jpg";
-import interior from "@/assets/interior.jpg";
-import pool from "@/assets/amenity-pool.jpg";
+import sunrise from "@/assets/yuva-heritage.jpg";
+import utsav from "@/assets/yuva-lakeview.jpg";
+import sunshine from "@/assets/yuva-nest.jpg";
+import clubhouse from "@/assets/site-1.jpg";
+import interior from "@/assets/site-3.jpg";
+import pool from "@/assets/site-5.jpg";
 
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
