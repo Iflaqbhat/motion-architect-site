@@ -5,7 +5,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { CTABand } from "@/components/home/CTABand";
 import { CAREERS, CONSENT_NOTE } from "@/data/site";
 import { GoldButton } from "@/components/site/GoldButton";
-import clubhouse from "@/assets/clubhouse.jpg";
+import clubhouse from "@/assets/site-2.jpg";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({

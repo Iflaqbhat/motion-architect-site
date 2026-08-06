@@ -1,4 +1,4 @@
-import clubhouse from "@/assets/clubhouse.jpg";
+import clubhouse from "@/assets/site-2.jpg";
 import { Reveal } from "../site/Reveal";
 import { GoldButton } from "../site/GoldButton";
 

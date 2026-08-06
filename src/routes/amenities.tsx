@@ -4,8 +4,8 @@ import { PageHeader } from "@/components/site/PageHeader";
 import { Reveal } from "@/components/site/Reveal";
 import { CTABand } from "@/components/home/CTABand";
 import { AMENITIES } from "@/data/site";
-import pool from "@/assets/amenity-pool.jpg";
-import clubhouse from "@/assets/clubhouse.jpg";
+import pool from "@/assets/site-5.jpg";
+import clubhouse from "@/assets/site-2.jpg";
 
 export const Route = createFileRoute("/amenities")({
   head: () => ({
