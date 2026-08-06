@@ -38,7 +38,7 @@ export function AboutTeaser() {
               loading="lazy"
               width={1400}
               height={1000}
-              className="h-[30rem] w-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
+              className="h-[30rem] w-full object-cover smooth-media group-hover:scale-110"
             />
             <div className="ink-panel absolute bottom-0 right-0 max-w-xs p-7">
               <p className="eyebrow">Our vision</p>
