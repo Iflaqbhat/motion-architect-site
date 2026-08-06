@@ -27,7 +27,7 @@ export function Hero() {
             {lines.map((w, i) => (
               <span key={w} className="block overflow-hidden">
                 <motion.span
-                  className={`block ${i === 1 ? "text-outline ml-[10vw]" : ""}`}
+                  className={`block ${i === 1 ? "text-gold-outline ml-[10vw]" : ""}`}
                   initial={{ y: "110%" }}
                   animate={{ y: 0 }}
                   transition={{ duration: 1, delay: 0.15 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
@@ -52,7 +52,7 @@ export function Hero() {
               alt="Illuminated Yuva Group residential towers at dusk"
               width={1920}
               height={1088}
-              className="h-[112%] w-full object-cover contrast-125 grayscale transition-[filter] duration-[1.2s] hover:grayscale-0"
+              className="h-[112%] w-full object-cover saturate-105 transition-[filter] duration-[1.2s] "
             />
           </div>
 

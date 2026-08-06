@@ -35,6 +35,7 @@
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
+  --color-teal: var(--teal);
   --font-display: "Bebas Neue", "Barlow Condensed", system-ui, sans-serif;
   --font-sans: "Barlow", system-ui, sans-serif;
 }
