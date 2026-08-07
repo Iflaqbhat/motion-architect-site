@@ -284,3 +284,159 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ── Motion utilities ─────────────────────────────── */
+@utility hover-lift {
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s ease,
+    background-color 0.4s ease,
+    color 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+/* Text/label that swaps upward on hover */
+@utility swap-up {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+
+  & > span {
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  & > span:last-child {
+    position: absolute;
+    inset: 0;
+    transform: translateY(105%);
+    color: var(--gold);
+  }
+
+  &:hover > span:first-child {
+    transform: translateY(-105%);
+  }
+
+  &:hover > span:last-child {
+    transform: translateY(0);
+  }
+}
+
+/* Circular icon button with gold fill sweep */
+@utility icon-orb {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, currentColor 28%, transparent);
+  overflow: hidden;
+  transition:
+    color 0.45s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-gold);
+    transform: scale(0);
+    border-radius: 9999px;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--ink);
+    transform: translateY(-3px) rotate(-6deg);
+    border-color: transparent;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+}
+
+@utility shine-sweep {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 35%,
+      color-mix(in oklab, var(--gold-soft) 45%, transparent) 50%,
+      transparent 65%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    transform: translateX(120%);
+  }
+}
+
+@utility float-slow {
+  animation: float-y 7s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@utility gold-sheen-text {
+  background: linear-gradient(
+    100deg,
+    var(--ink) 20%,
+    var(--gold) 45%,
+    var(--gold-soft) 55%,
+    var(--ink) 80%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 6s linear infinite;
+}
+
+@keyframes sheen {
+  0% {
+    background-position: 180% 0;
+  }
+  100% {
+    background-position: -80% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
