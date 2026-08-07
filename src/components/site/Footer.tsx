@@ -1,6 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
-import { NAV_LINKS, PROJECTS, CONTACT, WHATSAPP } from "@/data/site";
+import { NAV_LINKS, PROJECTS, CONTACT, WHATSAPP, SOCIALS } from "@/data/site";
+
+const SOCIAL_ICONS = { Facebook, Instagram, LinkedIn: Linkedin, YouTube: Youtube } as const;
 
 export function Footer() {
   return (
