@@ -36,7 +36,7 @@
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
   --color-teal: var(--teal);
-  --font-display: "Anton", "Archivo", system-ui, sans-serif;
+  --font-display: "Archivo", "Anton", system-ui, sans-serif;
   --font-sans: "Manrope", system-ui, sans-serif;
 }
 
@@ -99,7 +99,7 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 400;
+    font-weight: 800;
     letter-spacing: -0.01em;
     text-transform: uppercase;
     line-height: 0.88;
