@@ -6,8 +6,8 @@ export function Logo({ tone = "dark", className = "" }: Props) {
 
   return (
     <span className={`flex items-baseline gap-2 leading-none ${className}`}>
-      <span className={`font-display text-4xl tracking-tight ${main}`}>YUVA</span>
-      <span className={`font-display text-4xl tracking-tight ${sub}`}>GROUP</span>
+      <span className={`font-display text-3xl font-extrabold tracking-[-0.04em] ${main}`}>YUVA</span>
+      <span className={`font-display text-3xl font-extrabold tracking-[-0.04em] ${sub}`}>GROUP</span>
     </span>
   );
 }
