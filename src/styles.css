@@ -36,44 +36,44 @@
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
   --color-teal: var(--teal);
-  --font-display: "Bebas Neue", "Barlow Condensed", system-ui, sans-serif;
-  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-display: "Anton", "Archivo", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.125rem;
 
-  /* Ivory · Espresso · Amber (no blue) */
-  --background: oklch(0.985 0.008 90); /* warm ivory */
-  --foreground: oklch(0.24 0.012 60);
-  --card: oklch(0.955 0.014 85);
-  --card-foreground: oklch(0.24 0.012 60);
-  --popover: oklch(0.99 0.006 90);
-  --popover-foreground: oklch(0.24 0.012 60);
-  --primary: oklch(0.22 0.014 60); /* espresso */
-  --primary-foreground: oklch(0.985 0.008 90);
-  --secondary: oklch(0.93 0.02 85);
-  --secondary-foreground: oklch(0.22 0.014 60);
-  --muted: oklch(0.94 0.014 85);
-  --muted-foreground: oklch(0.48 0.014 65);
-  --accent: oklch(0.72 0.145 68);
-  --accent-foreground: oklch(0.2 0.014 60);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.88 0.014 85);
-  --input: oklch(0.88 0.014 85);
-  --ring: oklch(0.72 0.145 68);
+  /* Bone · Basalt · Brass */
+  --background: oklch(0.977 0.009 88); /* warm bone */
+  --foreground: oklch(0.21 0.018 52);
+  --card: oklch(0.948 0.014 84);
+  --card-foreground: oklch(0.21 0.018 52);
+  --popover: oklch(0.99 0.006 88);
+  --popover-foreground: oklch(0.21 0.018 52);
+  --primary: oklch(0.2 0.02 48); /* basalt */
+  --primary-foreground: oklch(0.977 0.009 88);
+  --secondary: oklch(0.925 0.021 84);
+  --secondary-foreground: oklch(0.2 0.02 48);
+  --muted: oklch(0.935 0.016 84);
+  --muted-foreground: oklch(0.45 0.019 58);
+  --accent: oklch(0.74 0.128 76);
+  --accent-foreground: oklch(0.2 0.02 48);
+  --destructive: oklch(0.55 0.2 28);
+  --destructive-foreground: oklch(0.98 0.004 88);
+  --border: oklch(0.875 0.016 84);
+  --input: oklch(0.875 0.016 84);
+  --ring: oklch(0.74 0.128 76);
 
-  --ink: oklch(0.22 0.014 60); /* deep espresso */
-  --ink-soft: oklch(0.36 0.014 62);
-  --gold: oklch(0.68 0.15 66); /* amber */
-  --gold-soft: oklch(0.82 0.1 78);
-  --sand: oklch(0.93 0.022 82);
-  --teal: oklch(0.6 0.09 80);
+  --ink: oklch(0.2 0.02 48); /* basalt */
+  --ink-soft: oklch(0.35 0.02 54);
+  --gold: oklch(0.71 0.132 74); /* brass */
+  --gold-soft: oklch(0.85 0.085 88);
+  --sand: oklch(0.925 0.026 80);
+  --teal: oklch(0.55 0.062 62); /* warm stone */
 
-  --shadow-lift: 0 26px 60px -30px oklch(0.22 0.014 60 / 0.45);
-  --shadow-glow: 0 18px 50px -22px oklch(0.68 0.15 66 / 0.55);
-  --gradient-ink: linear-gradient(150deg, oklch(0.18 0.012 60), oklch(0.28 0.018 62));
+  --shadow-lift: 0 28px 64px -32px oklch(0.2 0.02 48 / 0.5);
+  --shadow-glow: 0 18px 50px -22px oklch(0.71 0.132 74 / 0.55);
+  --gradient-ink: linear-gradient(150deg, oklch(0.16 0.016 48), oklch(0.27 0.024 52));
   --gradient-gold: linear-gradient(100deg, var(--gold), var(--gold-soft));
 }
 
