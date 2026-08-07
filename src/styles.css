@@ -43,37 +43,37 @@
 :root {
   --radius: 0.125rem;
 
-  /* Ivory · Midnight · Amber */
+  /* Ivory · Espresso · Amber (no blue) */
   --background: oklch(0.985 0.008 90); /* warm ivory */
-  --foreground: oklch(0.26 0.03 250);
+  --foreground: oklch(0.24 0.012 60);
   --card: oklch(0.955 0.014 85);
-  --card-foreground: oklch(0.26 0.03 250);
+  --card-foreground: oklch(0.24 0.012 60);
   --popover: oklch(0.99 0.006 90);
-  --popover-foreground: oklch(0.26 0.03 250);
-  --primary: oklch(0.24 0.05 250); /* midnight */
+  --popover-foreground: oklch(0.24 0.012 60);
+  --primary: oklch(0.22 0.014 60); /* espresso */
   --primary-foreground: oklch(0.985 0.008 90);
   --secondary: oklch(0.93 0.02 85);
-  --secondary-foreground: oklch(0.24 0.05 250);
+  --secondary-foreground: oklch(0.22 0.014 60);
   --muted: oklch(0.94 0.014 85);
-  --muted-foreground: oklch(0.48 0.025 250);
+  --muted-foreground: oklch(0.48 0.014 65);
   --accent: oklch(0.72 0.145 68);
-  --accent-foreground: oklch(0.2 0.045 250);
+  --accent-foreground: oklch(0.2 0.014 60);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.88 0.014 85);
   --input: oklch(0.88 0.014 85);
   --ring: oklch(0.72 0.145 68);
 
-  --ink: oklch(0.24 0.05 250); /* midnight blue */
-  --ink-soft: oklch(0.36 0.04 250);
+  --ink: oklch(0.22 0.014 60); /* deep espresso */
+  --ink-soft: oklch(0.36 0.014 62);
   --gold: oklch(0.68 0.15 66); /* amber */
   --gold-soft: oklch(0.82 0.1 78);
   --sand: oklch(0.93 0.022 82);
-  --teal: oklch(0.55 0.09 195);
+  --teal: oklch(0.6 0.09 80);
 
-  --shadow-lift: 0 26px 60px -30px oklch(0.24 0.05 250 / 0.45);
+  --shadow-lift: 0 26px 60px -30px oklch(0.22 0.014 60 / 0.45);
   --shadow-glow: 0 18px 50px -22px oklch(0.68 0.15 66 / 0.55);
-  --gradient-ink: linear-gradient(150deg, oklch(0.2 0.05 250), oklch(0.3 0.06 240));
+  --gradient-ink: linear-gradient(150deg, oklch(0.18 0.012 60), oklch(0.28 0.018 62));
   --gradient-gold: linear-gradient(100deg, var(--gold), var(--gold-soft));
 }
 
@@ -283,4 +283,160 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* ── Motion utilities ─────────────────────────────── */
+@utility hover-lift {
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s ease,
+    background-color 0.4s ease,
+    color 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+/* Text/label that swaps upward on hover */
+@utility swap-up {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+
+  & > span {
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  & > span:last-child {
+    position: absolute;
+    inset: 0;
+    transform: translateY(105%);
+    color: var(--gold);
+  }
+
+  &:hover > span:first-child {
+    transform: translateY(-105%);
+  }
+
+  &:hover > span:last-child {
+    transform: translateY(0);
+  }
+}
+
+/* Circular icon button with gold fill sweep */
+@utility icon-orb {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.75rem;
+  width: 2.75rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, currentColor 28%, transparent);
+  overflow: hidden;
+  transition:
+    color 0.45s ease,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-gold);
+    transform: scale(0);
+    border-radius: 9999px;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover {
+    color: var(--ink);
+    transform: translateY(-3px) rotate(-6deg);
+    border-color: transparent;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+  }
+}
+
+@utility shine-sweep {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 35%,
+      color-mix(in oklab, var(--gold-soft) 45%, transparent) 50%,
+      transparent 65%
+    );
+    transform: translateX(-120%);
+    transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    transform: translateX(120%);
+  }
+}
+
+@utility float-slow {
+  animation: float-y 7s ease-in-out infinite;
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@utility gold-sheen-text {
+  background: linear-gradient(
+    100deg,
+    var(--ink) 20%,
+    var(--gold) 45%,
+    var(--gold-soft) 55%,
+    var(--ink) 80%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 6s linear infinite;
+}
+
+@keyframes sheen {
+  0% {
+    background-position: 180% 0;
+  }
+  100% {
+    background-position: -80% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

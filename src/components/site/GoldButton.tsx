@@ -4,16 +4,16 @@ import type { ReactNode } from "react";
 type Variant = "gold" | "outline" | "ghostLight";
 
 const base =
-  "group relative inline-flex items-center gap-3 overflow-hidden px-7 py-3.5 text-[0.65rem] font-bold uppercase tracking-[0.24em] transition-colors duration-500";
+  "group relative inline-flex items-center gap-3 overflow-hidden px-7 py-3.5 text-[0.65rem] font-bold uppercase tracking-[0.24em] shine-sweep hover-lift transition-colors duration-500";
 
 const styles: Record<Variant, string> = {
-  gold: "bg-ink text-background",
+  gold: "bg-ink text-background hover:text-ink",
   outline: "border border-ink text-ink hover:text-background",
   ghostLight: "border border-background/40 text-background hover:text-ink",
 };
 
 const fills: Record<Variant, string> = {
-  gold: "bg-foreground",
+  gold: "bg-[image:var(--gradient-gold)]",
   outline: "bg-ink",
   ghostLight: "bg-background",
 };

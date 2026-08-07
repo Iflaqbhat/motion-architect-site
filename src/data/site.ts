@@ -435,6 +435,16 @@ export const WHATSAPP = [
   { label: "82 82 82 3396", href: "https://wa.me/918282823396" },
 ];
 
+export const SOCIALS = [
+  { label: "Facebook", href: "https://www.facebook.com/people/Yuva-Group/61575266570811/" },
+  { label: "Instagram", href: "https://www.instagram.com/yuvagroup_yspl/" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/yuva-group/?viewAsMember=true",
+  },
+  { label: "YouTube", href: "https://www.youtube.com/@yuvagroups" },
+];
+
 export const CONSENT_NOTE =
   "By submitting this form, I consent to receive communications from Yuva Group through WhatsApp, SMS, email, phone calls and other channels, even if my number is registered under DND/NDNC.";
 

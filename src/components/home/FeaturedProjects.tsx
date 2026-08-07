@@ -16,7 +16,7 @@ export function FeaturedProjects() {
       <div className="mx-auto max-w-[110rem] px-6 md:px-12">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-8 border-b-2 border-ink pb-8">
-            <h2 className="text-7xl md:text-9xl">Projects</h2>
+            <h2 className="gold-sheen-text text-7xl md:text-9xl">Projects</h2>
             <div className="text-right">
               <p className="text-[0.6rem] font-bold uppercase tracking-[0.24em]">
                 Current availability

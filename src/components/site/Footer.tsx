@@ -1,6 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Logo } from "./Logo";
-import { NAV_LINKS, PROJECTS, CONTACT, WHATSAPP } from "@/data/site";
+import { NAV_LINKS, PROJECTS, CONTACT, WHATSAPP, SOCIALS } from "@/data/site";
+
+const SOCIAL_ICONS = { Facebook, Instagram, LinkedIn: Linkedin, YouTube: Youtube } as const;
 
 export function Footer() {
   return (
@@ -44,6 +47,28 @@ export function Footer() {
                   {w.label}
                 </a>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <h3 className="eyebrow">Follow us</h3>
+            <div className="mt-4 flex flex-wrap gap-3 text-background/70">
+              {SOCIALS.map((s) => {
+                const Icon = SOCIAL_ICONS[s.label as keyof typeof SOCIAL_ICONS];
+                return (
+                  <a
+                    key={s.href}
+                    href={s.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={s.label}
+                    title={s.label}
+                    className="icon-orb"
+                  >
+                    <Icon className="h-4 w-4" strokeWidth={1.6} />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
