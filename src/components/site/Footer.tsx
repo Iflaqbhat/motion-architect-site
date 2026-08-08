@@ -11,12 +11,12 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo tone="light" />
-          <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/65">
+          <p className="mt-6 max-w-sm text-base font-medium leading-relaxed text-background/65">
             Experience modern living with premium amenities, vibrant spaces and seamless
             connectivity — apartments across Bengaluru's southern corridor by Yuva Structures Pvt
             Ltd.
           </p>
-          <address className="mt-8 space-y-1 text-sm not-italic text-background/60">
+          <address className="mt-8 space-y-1 text-base font-medium not-italic text-background/60">
             {CONTACT.phones.map((p) => (
               <p key={p}>
                 <a href={`tel:${p.replace(/\s/g, "")}`} className="nav-link">
@@ -35,7 +35,7 @@ export function Footer() {
 
           <div className="mt-8">
             <h3 className="eyebrow">WhatsApp us</h3>
-            <div className="mt-3 flex flex-wrap gap-4 text-sm text-background/70">
+            <div className="mt-3 flex flex-wrap gap-4 text-base font-medium text-background/70">
               {WHATSAPP.map((w) => (
                 <a
                   key={w.href}
@@ -75,7 +75,7 @@ export function Footer() {
 
         <div>
           <h3 className="eyebrow">Navigate</h3>
-          <ul className="mt-5 space-y-3 text-sm text-background/70">
+          <ul className="mt-5 space-y-3 text-base font-medium text-background/70">
             {NAV_LINKS.map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="nav-link">
@@ -93,7 +93,7 @@ export function Footer() {
 
         <div>
           <h3 className="eyebrow">Projects</h3>
-          <ul className="mt-5 space-y-3 text-sm text-background/70">
+          <ul className="mt-5 space-y-3 text-base font-medium text-background/70">
             {PROJECTS.map((p) => (
               <li key={p.slug}>
                 <Link to="/projects/$slug" params={{ slug: p.slug }} className="nav-link">
@@ -107,7 +107,7 @@ export function Footer() {
               </Link>
             </li>
           </ul>
-          <p className="mt-8 max-w-xs text-sm leading-relaxed text-background/60">
+          <p className="mt-8 max-w-xs text-base font-medium leading-relaxed text-background/60">
             {CONTACT.address}
           </p>
         </div>

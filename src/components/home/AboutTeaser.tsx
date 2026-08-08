@@ -9,7 +9,7 @@ export function AboutTeaser() {
       <div className="grid items-center gap-14 lg:grid-cols-2">
         <Reveal>
           <p className="eyebrow">About us</p>
-          <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
+          <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">
             <SplitText text="Spaces that inspire." />
             <br />
             <span className="text-gold">
@@ -18,7 +18,7 @@ export function AboutTeaser() {
           </h2>
           <div className="gold-rule mt-7" />
           <ScrollFadeText
-            className="mt-7 max-w-lg leading-relaxed text-muted-foreground"
+            className="mt-7 max-w-lg text-base font-medium leading-relaxed text-muted-foreground"
             text="Led by Mr. Mahendra Reddy, Yuva Structures Pvt Ltd has spent 15 years building quality, value-driven apartments for modern homebuyers across Bengaluru — around ten projects completed, and more rising along the Hosur Road corridor."
           />
 

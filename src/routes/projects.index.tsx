@@ -50,7 +50,7 @@ function Projects() {
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`relative overflow-hidden border px-6 py-3 text-[0.68rem] uppercase tracking-[0.2em] transition-colors duration-400 ${
+                className={`relative overflow-hidden border px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] transition-colors duration-400 ${
                   filter === f
                     ? "border-gold bg-gold text-ink"
                     : "border-border text-muted-foreground hover:border-gold hover:text-gold"
@@ -79,14 +79,14 @@ function Projects() {
               <article className="group grid gap-6 bg-background p-8 transition-colors duration-500 hover:bg-sand md:grid-cols-[1fr_2fr] md:items-center">
                 <div>
                   <p className="eyebrow">{p.status}</p>
-                  <h2 className="mt-3 text-3xl transition-colors duration-400 group-hover:text-gold">
+                  <h2 className="mt-3 text-2xl transition-colors duration-400 group-hover:text-gold">
                     {p.name}
                   </h2>
-                  <p className="mt-2 text-sm text-muted-foreground">{p.location}</p>
+                  <p className="mt-2 text-base font-medium text-muted-foreground">{p.location}</p>
                 </div>
                 <div>
-                  <p className="leading-relaxed text-muted-foreground">{p.blurb}</p>
-                  <p className="mt-4 font-display text-xl text-ink">
+                  <p className="text-base font-medium leading-relaxed text-muted-foreground">{p.blurb}</p>
+                  <p className="mt-4 font-display text-lg text-ink">
                     {p.type} · {p.units}
                   </p>
                 </div>
@@ -100,10 +100,10 @@ function Projects() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <p className="eyebrow">Delivered</p>
-            <h2 className="mt-5 text-4xl leading-tight md:text-5xl">
+            <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">
               Completed <span className="text-gold">projects</span>
             </h2>
-            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-base font-medium leading-relaxed text-muted-foreground">
               Around ten communities handed over across Bengaluru — occupied, maintained and still
               performing for the families and investors who bought into them.
             </p>
@@ -124,11 +124,11 @@ function Projects() {
                     />
                   </div>
                   <div className="p-7">
-                    <h3 className="text-2xl transition-colors duration-400 group-hover:text-gold">
+                    <h3 className="text-xl transition-colors duration-400 group-hover:text-gold">
                       {p.name}
                     </h3>
-                    <p className="mt-2 text-sm text-muted-foreground">{p.location}</p>
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.blurb}</p>
+                    <p className="mt-2 text-base font-medium text-muted-foreground">{p.location}</p>
+                    <p className="mt-4 text-base font-medium leading-relaxed text-muted-foreground">{p.blurb}</p>
                   </div>
                 </article>
               </Reveal>

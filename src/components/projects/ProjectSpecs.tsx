@@ -6,7 +6,7 @@ export function ProjectSpecs({ specs }: { specs: Spec[] }) {
     <section className="mx-auto max-w-7xl px-6 py-24">
       <Reveal>
         <p className="eyebrow">Specifications</p>
-        <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
+        <h2 className="mt-5 max-w-2xl text-3xl leading-[1.05] md:text-4xl">
           Written down before we <span className="text-gold">pour concrete</span>
         </h2>
       </Reveal>
@@ -15,8 +15,8 @@ export function ProjectSpecs({ specs }: { specs: Spec[] }) {
         {specs.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.04}>
             <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-sand">
-              <p className="text-[0.65rem] uppercase tracking-[0.2em] text-gold">{s.label}</p>
-              <p className="mt-3 leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-1">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{s.label}</p>
+              <p className="mt-3 text-base font-medium leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-1">
                 {s.value}
               </p>
             </div>

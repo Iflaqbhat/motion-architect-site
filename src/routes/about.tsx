@@ -59,15 +59,15 @@ function About() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="eyebrow">Welcome to Yuva Structures Pvt Ltd</p>
-            <h2 className="mt-5 text-4xl leading-tight">
+            <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">
               Luxury and affordable flats <span className="text-gold">in Bangalore</span>
             </h2>
-            <p className="mt-7 leading-relaxed text-muted-foreground">
+            <p className="mt-7 text-base font-medium leading-relaxed text-muted-foreground">
               Yuva Group began by developing quality, value-driven apartments designed for modern
               homebuyers across Bengaluru, and is actively involved in identifying and developing
               high-potential land parcels in key locations.
             </p>
-            <p className="mt-5 leading-relaxed text-muted-foreground">
+            <p className="mt-5 text-base font-medium leading-relaxed text-muted-foreground">
               Over the years the Group has grown consistently and completed around ten projects,
               earning the trust of homebuyers and investors alike — expanding into villa projects
               and land developments that combine location advantage, quality construction and
@@ -82,8 +82,8 @@ function About() {
           <Reveal>
             <div className="bg-card p-10">
               <p className="eyebrow">Leadership</p>
-              <h2 className="mt-5 text-3xl">{LEADERSHIP.name}</h2>
-              <p className="mt-2 text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground">
+              <h2 className="mt-5 text-2xl md:text-3xl">{LEADERSHIP.name}</h2>
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 {LEADERSHIP.role}
               </p>
               <div className="gold-rule mt-7" />
@@ -91,7 +91,7 @@ function About() {
           </Reveal>
           <Reveal delay={0.1}>
             {LEADERSHIP.copy.map((c) => (
-              <p key={c.slice(0, 24)} className="mb-6 leading-relaxed text-muted-foreground">
+              <p key={c.slice(0, 24)} className="mb-6 text-base font-medium leading-relaxed text-muted-foreground">
                 {c}
               </p>
             ))}
@@ -102,8 +102,8 @@ function About() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <Reveal>
           <p className="eyebrow">Our dedicated team</p>
-          <h2 className="mt-5 text-4xl md:text-5xl">Meet the team behind our success</h2>
-          <p className="mt-6 max-w-xl leading-relaxed text-muted-foreground">
+          <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">Meet the team behind our success</h2>
+          <p className="mt-6 max-w-xl text-base font-medium leading-relaxed text-muted-foreground">
             Dedicated professionals driving innovation, growth and excellence.
           </p>
         </Reveal>
@@ -111,11 +111,11 @@ function About() {
           {TEAM.map((m, i) => (
             <Reveal key={m.name} delay={i * 0.05}>
               <div className="group h-full bg-background p-8 transition-colors duration-500 hover:bg-sand">
-                <span className="font-display text-4xl text-gold/40 transition-colors duration-500 group-hover:text-gold">
+                <span className="font-display text-3xl text-gold/40 transition-colors duration-500 group-hover:text-gold">
                   {m.name.replace(/^(Mr\.|Mrs\.)\s*/, "").charAt(0)}
                 </span>
-                <h3 className="mt-4 text-xl">{m.name}</h3>
-                <p className="mt-2 text-[0.65rem] uppercase tracking-[0.2em] text-muted-foreground">
+                <h3 className="mt-4 text-lg">{m.name}</h3>
+                <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                   {m.role}
                 </p>
               </div>
@@ -128,17 +128,17 @@ function About() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <p className="eyebrow">What we do</p>
-            <h2 className="mt-5 text-4xl text-background md:text-5xl">Capabilities</h2>
+            <h2 className="mt-5 text-3xl leading-[1.05] text-background md:text-4xl">Capabilities</h2>
           </Reveal>
           <div className="mt-14 grid gap-px bg-background/12 md:grid-cols-2">
             {CAPABILITIES.map((c, i) => (
               <Reveal key={c.title} delay={i * 0.08}>
                 <div className="group h-full bg-[oklch(0.23_0.05_262)] p-10 transition-colors duration-500 hover:bg-[oklch(0.27_0.055_262)]">
                   <span className="font-display text-sm text-gold">0{i + 1}</span>
-                  <h3 className="mt-4 text-2xl text-background transition-transform duration-500 group-hover:translate-x-1.5">
+                  <h3 className="mt-4 text-xl text-background transition-transform duration-500 group-hover:translate-x-1.5">
                     {c.title}
                   </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-background/65">{c.copy}</p>
+                  <p className="mt-4 text-base font-medium leading-relaxed text-background/65">{c.copy}</p>
                 </div>
               </Reveal>
             ))}
@@ -149,14 +149,14 @@ function About() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <Reveal>
           <p className="eyebrow">Milestones</p>
-          <h2 className="mt-5 text-4xl md:text-5xl">Fifteen years, one standard</h2>
+          <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">Fifteen years, one standard</h2>
         </Reveal>
         <div className="mt-14 border-t border-border">
           {TIMELINE.map((t, i) => (
             <Reveal key={t.year} delay={i * 0.07}>
               <div className="group grid gap-4 border-b border-border py-8 transition-colors duration-500 hover:bg-sand md:grid-cols-[10rem_1fr] md:px-4">
-                <span className="font-display text-3xl text-gold">{t.year}</span>
-                <p className="leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-2">
+                <span className="font-display text-2xl text-gold">{t.year}</span>
+                <p className="text-base font-medium leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-2">
                   {t.text}
                 </p>
               </div>
@@ -168,7 +168,7 @@ function About() {
           {STATS.map((s) => (
             <Reveal key={s.label}>
               <p className="font-display text-4xl text-ink">{s.value}</p>
-              <p className="mt-2 text-[0.68rem] uppercase tracking-[0.2em] text-muted-foreground">
+              <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                 {s.label}
               </p>
             </Reveal>

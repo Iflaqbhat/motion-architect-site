@@ -37,7 +37,7 @@ export function ProjectHero({ project }: { project: Project }) {
             initial={{ y: "110%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="text-5xl leading-[1.02] text-background md:text-7xl"
+            className="text-4xl leading-[1.05] text-background md:text-5xl"
           >
             {project.name}
           </motion.h1>
@@ -47,7 +47,7 @@ export function ProjectHero({ project }: { project: Project }) {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.35 }}
-          className="mt-5 max-w-xl leading-relaxed text-background/75"
+          className="mt-5 max-w-xl text-lg font-medium leading-relaxed text-background/75"
         >
           {project.tagline} — {project.type} at {project.location}.
         </motion.p>
