@@ -7,14 +7,14 @@ export function FloorPlanTable({ rows }: { rows: FloorPlanRow[] }) {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <p className="eyebrow">Typical floor plan</p>
-          <h2 className="mt-5 text-4xl text-background md:text-5xl">Unit schedule</h2>
+          <h2 className="mt-5 text-3xl leading-[1.05] text-background md:text-4xl">Unit schedule</h2>
         </Reveal>
 
         <Reveal delay={0.1}>
           <div className="mt-12 overflow-x-auto">
-            <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+            <table className="w-full min-w-[34rem] border-collapse text-left text-base">
               <thead>
-                <tr className="text-[0.65rem] uppercase tracking-[0.2em] text-gold">
+                <tr className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                   <th className="border-b border-background/20 py-4 pr-4 font-medium">Flat</th>
                   <th className="border-b border-background/20 py-4 pr-4 font-medium">Area</th>
                   <th className="border-b border-background/20 py-4 pr-4 font-medium">Facing</th>

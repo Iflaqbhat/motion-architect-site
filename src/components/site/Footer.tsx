@@ -35,7 +35,7 @@ export function Footer() {
 
           <div className="mt-8">
             <h3 className="eyebrow">WhatsApp us</h3>
-            <div className="mt-3 flex flex-wrap gap-4 text-sm text-background/70">
+            <div className="mt-3 flex flex-wrap gap-4 text-base font-medium text-background/70">
               {WHATSAPP.map((w) => (
                 <a
                   key={w.href}
@@ -75,7 +75,7 @@ export function Footer() {
 
         <div>
           <h3 className="eyebrow">Navigate</h3>
-          <ul className="mt-5 space-y-3 text-sm text-background/70">
+          <ul className="mt-5 space-y-3 text-base font-medium text-background/70">
             {NAV_LINKS.map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="nav-link">
@@ -93,7 +93,7 @@ export function Footer() {
 
         <div>
           <h3 className="eyebrow">Projects</h3>
-          <ul className="mt-5 space-y-3 text-sm text-background/70">
+          <ul className="mt-5 space-y-3 text-base font-medium text-background/70">
             {PROJECTS.map((p) => (
               <li key={p.slug}>
                 <Link to="/projects/$slug" params={{ slug: p.slug }} className="nav-link">
@@ -107,7 +107,7 @@ export function Footer() {
               </Link>
             </li>
           </ul>
-          <p className="mt-8 max-w-xs text-sm leading-relaxed text-background/60">
+          <p className="mt-8 max-w-xs text-base font-medium leading-relaxed text-background/60">
             {CONTACT.address}
           </p>
         </div>

@@ -7,7 +7,7 @@ export function ProjectGallery({ project }: { project: Project }) {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <p className="eyebrow">Gallery</p>
-          <h2 className="mt-5 text-4xl md:text-5xl">A closer look</h2>
+          <h2 className="mt-5 text-3xl leading-[1.05] md:text-4xl">A closer look</h2>
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
