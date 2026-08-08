@@ -11,12 +11,12 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-4">
         <div className="md:col-span-2">
           <Logo tone="light" />
-          <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/65">
+          <p className="mt-6 max-w-sm text-base font-medium leading-relaxed text-background/65">
             Experience modern living with premium amenities, vibrant spaces and seamless
             connectivity — apartments across Bengaluru's southern corridor by Yuva Structures Pvt
             Ltd.
           </p>
-          <address className="mt-8 space-y-1 text-sm not-italic text-background/60">
+          <address className="mt-8 space-y-1 text-base font-medium not-italic text-background/60">
             {CONTACT.phones.map((p) => (
               <p key={p}>
                 <a href={`tel:${p.replace(/\s/g, "")}`} className="nav-link">

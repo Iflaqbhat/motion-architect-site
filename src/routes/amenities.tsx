@@ -45,10 +45,10 @@ function Amenities() {
                 <span className="font-display text-sm text-gold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h2 className="mt-4 text-2xl transition-transform duration-500 group-hover:translate-x-1.5">
+                <h2 className="mt-4 text-xl transition-transform duration-500 group-hover:translate-x-1.5">
                   {a.name}
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{a.copy}</p>
+                <p className="mt-4 text-base font-medium leading-relaxed text-muted-foreground">{a.copy}</p>
               </div>
             </Reveal>
           ))}

@@ -55,7 +55,7 @@ function Contact() {
                   {d.lines.map((l) => (
                     <p
                       key={l}
-                      className="mt-2 leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-1"
+                      className="mt-2 text-base font-medium leading-relaxed text-muted-foreground transition-transform duration-500 group-hover:translate-x-1"
                     >
                       {l}
                     </p>
@@ -75,7 +75,7 @@ function Contact() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <p className="eyebrow">Visit our experience centre</p>
-            <h2 className="mt-5 max-w-2xl text-4xl leading-tight md:text-5xl">
+            <h2 className="mt-5 max-w-2xl text-3xl leading-[1.05] md:text-4xl">
               Chandapura, <span className="text-gold">Hosur Road</span>
             </h2>
           </Reveal>
