@@ -5,7 +5,7 @@ export function WhyChoose() {
   return (
     <section className="mx-auto max-w-[110rem] px-6 py-28 md:px-12">
       <Reveal>
-        <div className="grid gap-10 border-b-2 border-ink pb-10 md:grid-cols-12">
+        <div className="grid gap-10 border-b border-ink/15 pb-10 md:grid-cols-12">
           <h2 className="text-6xl md:col-span-7 md:text-8xl">
             Why choose
             <br />

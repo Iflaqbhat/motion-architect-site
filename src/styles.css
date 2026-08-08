@@ -36,44 +36,44 @@
   --color-gold-soft: var(--gold-soft);
   --color-sand: var(--sand);
   --color-teal: var(--teal);
-  --font-display: "Archivo", "Anton", system-ui, sans-serif;
-  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Archivo Black", "Archivo", system-ui, sans-serif;
+  --font-sans: "Hind", system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.125rem;
 
-  /* Bone · Basalt · Brass */
-  --background: oklch(0.977 0.009 88); /* warm bone */
-  --foreground: oklch(0.21 0.018 52);
-  --card: oklch(0.948 0.014 84);
-  --card-foreground: oklch(0.21 0.018 52);
-  --popover: oklch(0.99 0.006 88);
-  --popover-foreground: oklch(0.21 0.018 52);
-  --primary: oklch(0.2 0.02 48); /* basalt */
-  --primary-foreground: oklch(0.977 0.009 88);
-  --secondary: oklch(0.925 0.021 84);
-  --secondary-foreground: oklch(0.2 0.02 48);
-  --muted: oklch(0.935 0.016 84);
-  --muted-foreground: oklch(0.45 0.019 58);
-  --accent: oklch(0.74 0.128 76);
-  --accent-foreground: oklch(0.2 0.02 48);
+  /* Navy Trust — deep navy, steel blue, crisp white */
+  --background: oklch(0.993 0.002 250);
+  --foreground: oklch(0.24 0.062 264);
+  --card: oklch(0.966 0.006 250);
+  --card-foreground: oklch(0.24 0.062 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.062 264);
+  --primary: oklch(0.24 0.062 264); /* navy */
+  --primary-foreground: oklch(0.99 0.002 250);
+  --secondary: oklch(0.945 0.009 250);
+  --secondary-foreground: oklch(0.24 0.062 264);
+  --muted: oklch(0.952 0.007 250);
+  --muted-foreground: oklch(0.5 0.026 255);
+  --accent: oklch(0.55 0.092 248); /* steel blue */
+  --accent-foreground: oklch(0.99 0.002 250);
   --destructive: oklch(0.55 0.2 28);
-  --destructive-foreground: oklch(0.98 0.004 88);
-  --border: oklch(0.875 0.016 84);
-  --input: oklch(0.875 0.016 84);
-  --ring: oklch(0.74 0.128 76);
+  --destructive-foreground: oklch(0.98 0.002 250);
+  --border: oklch(0.9 0.011 250);
+  --input: oklch(0.9 0.011 250);
+  --ring: oklch(0.55 0.092 248);
 
-  --ink: oklch(0.2 0.02 48); /* basalt */
-  --ink-soft: oklch(0.35 0.02 54);
-  --gold: oklch(0.71 0.132 74); /* brass */
-  --gold-soft: oklch(0.85 0.085 88);
-  --sand: oklch(0.925 0.026 80);
-  --teal: oklch(0.55 0.062 62); /* warm stone */
+  --ink: oklch(0.24 0.062 264); /* deep navy */
+  --ink-soft: oklch(0.37 0.055 258);
+  --gold: oklch(0.55 0.092 248); /* steel-blue accent */
+  --gold-soft: oklch(0.68 0.076 244);
+  --sand: oklch(0.93 0.011 250);
+  --teal: oklch(0.45 0.06 250);
 
-  --shadow-lift: 0 28px 64px -32px oklch(0.2 0.02 48 / 0.5);
-  --shadow-glow: 0 18px 50px -22px oklch(0.71 0.132 74 / 0.55);
-  --gradient-ink: linear-gradient(150deg, oklch(0.16 0.016 48), oklch(0.27 0.024 52));
+  --shadow-lift: 0 28px 64px -34px oklch(0.24 0.062 264 / 0.45);
+  --shadow-glow: 0 18px 50px -24px oklch(0.55 0.092 248 / 0.4);
+  --gradient-ink: linear-gradient(150deg, oklch(0.19 0.06 266), oklch(0.31 0.06 258));
   --gradient-gold: linear-gradient(100deg, var(--gold), var(--gold-soft));
 }
 
@@ -99,10 +99,10 @@
   h2,
   h3 {
     font-family: var(--font-display);
-    font-weight: 800;
-    letter-spacing: -0.035em;
+    font-weight: 400;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
-    line-height: 0.88;
+    line-height: 0.92;
     color: var(--ink);
   }
 }

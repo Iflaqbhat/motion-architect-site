@@ -25,8 +25,8 @@ export default function Scene3D({ className = "" }: { className?: string }) {
     const group = new THREE.Group();
     scene.add(group);
 
-    const ink = new THREE.Color("#1b2740");
-    const gold = new THREE.Color("#c78a34");
+    const ink = new THREE.Color("#16234a");
+    const gold = new THREE.Color("#3b6fa0");
 
     // Towers
     const towers: THREE.Mesh[] = [];

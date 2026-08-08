@@ -15,7 +15,7 @@ export function PageHeader({
         <Reveal>
           <p className="eyebrow">{eyebrow}</p>
           <h1 className="mt-6 max-w-5xl text-7xl leading-[0.85] md:text-[10vw]">{title}</h1>
-          <div className="mt-10 grid gap-8 border-t-2 border-ink pt-8 md:grid-cols-12">
+          <div className="mt-10 grid gap-8 border-t border-ink/15 pt-8 md:grid-cols-12">
             <p className="text-sm leading-relaxed text-muted-foreground md:col-span-5 md:col-start-7">
               {intro}
             </p>
