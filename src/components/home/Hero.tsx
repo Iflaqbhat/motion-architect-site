@@ -45,7 +45,7 @@ export function Hero() {
               Yuva Structures Pvt Ltd — Bengaluru — Est. 2010
             </motion.p>
 
-            <h1 className="mt-8 text-[clamp(3.2rem,7.2vw,6.5rem)] leading-[0.94] tracking-tight">
+            <h1 className="mt-8 text-[clamp(2.6rem,5.5vw,4.8rem)] leading-[1.05] tracking-tight">
               {lines.map((w, i) => (
                 <span key={w} className="block overflow-hidden">
                   <motion.span
@@ -64,7 +64,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.45 }}
-              className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground"
+              className="mt-8 max-w-lg text-lg font-medium leading-relaxed text-muted-foreground"
             >
               Premium and affordable 1, 2 and 3 BHK homes along Bengaluru&rsquo;s Hosur Road
               corridor — engineered with precision and delivered on time.

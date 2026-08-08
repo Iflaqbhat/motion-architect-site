@@ -29,7 +29,7 @@ export function Navbar() {
           <Logo />
         </Link>
 
-        <ul className="hidden items-end gap-8 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-ink md:flex">
+        <ul className="hidden items-end gap-8 text-xs font-semibold uppercase tracking-[0.2em] text-ink md:flex">
           {links.map((link, i) => {
             const isProjects = link.to === "/projects";
             return (
@@ -38,7 +38,7 @@ export function Navbar() {
                 className="flex items-baseline gap-1.5"
                 onMouseEnter={() => setMega(isProjects)}
               >
-                <span className="font-display text-[0.65rem] text-gold">
+                <span className="font-display text-xs text-gold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <Link to={link.to} className="nav-link" data-active={pathname.startsWith(link.to) && link.to !== "/"}>
@@ -52,7 +52,7 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             to="/contact"
-            className="group relative hidden overflow-hidden bg-ink px-6 py-2.5 text-[0.62rem] font-bold uppercase tracking-[0.24em] text-background md:inline-flex"
+            className="group relative hidden overflow-hidden bg-ink px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.2em] text-background md:inline-flex"
           >
             <span className="absolute inset-0 origin-bottom scale-y-0 bg-[image:var(--gradient-gold)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-y-100" />
             <span className="relative z-10 transition-colors duration-500 group-hover:text-ink">

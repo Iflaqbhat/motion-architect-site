@@ -9,12 +9,12 @@ export function FeaturedProjects() {
       <div className="mx-auto max-w-[110rem] px-6 md:px-12">
         <Reveal>
           <div className="flex flex-wrap items-end justify-between gap-8 border-b border-ink/15 pb-8">
-            <h2 className="text-5xl md:text-7xl">Projects</h2>
+            <h2 className="text-4xl md:text-5xl">Projects</h2>
             <div className="text-right">
-              <p className="text-[0.6rem] font-bold uppercase tracking-[0.24em] text-gold">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
                 Current availability
               </p>
-              <p className="mt-2 text-sm text-muted-foreground">Ongoing collection</p>
+              <p className="mt-2 text-base font-medium text-muted-foreground">Ongoing collection</p>
             </div>
           </div>
         </Reveal>

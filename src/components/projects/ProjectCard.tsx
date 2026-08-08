@@ -32,14 +32,14 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
             <span className="font-display text-lg text-ink/25 transition-colors duration-500 group-hover:text-gold">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="text-4xl transition-colors duration-500 group-hover:text-gold">
+            <h3 className="text-2xl transition-colors duration-500 group-hover:text-gold">
               {project.name}
             </h3>
           </div>
-          <p className="mt-2 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-muted-foreground">
+          <p className="mt-2 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
             {project.location} — {project.type}
           </p>
-          <p className="mt-1 text-sm text-muted-foreground">{project.units}</p>
+          <p className="mt-1 text-base font-medium text-muted-foreground">{project.units}</p>
         </div>
         <span className="mt-4 h-0.5 w-10 shrink-0 bg-ink transition-all duration-500 group-hover:w-16 group-hover:bg-[image:var(--gradient-gold)]" />
       </div>
