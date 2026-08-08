@@ -88,12 +88,12 @@ export function Navbar() {
             <div className="mx-auto grid max-w-[110rem] gap-8 px-6 py-10 md:grid-cols-4 md:px-12">
               <div>
                 <p className="eyebrow">Our portfolio</p>
-                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-base font-medium leading-relaxed text-muted-foreground">
                   Premium and affordable residences along Bengaluru&rsquo;s Hosur Road corridor.
                 </p>
                 <Link
                   to="/projects"
-                  className="mt-6 inline-block text-[0.62rem] font-bold uppercase tracking-[0.24em] text-ink gold-underline"
+                  className="mt-6 inline-block text-xs font-semibold uppercase tracking-[0.2em] text-ink gold-underline"
                 >
                   View all projects &#8594;
                 </Link>
@@ -120,14 +120,14 @@ export function Navbar() {
                         className="h-full w-full object-cover smooth-media group-hover:scale-110"
                       />
                       <span className="absolute inset-0 bg-ink/0 transition-colors duration-500 group-hover:bg-ink/25" />
-                      <span className="absolute left-0 top-0 bg-[image:var(--gradient-gold)] px-3 py-1.5 text-[0.55rem] font-bold uppercase tracking-[0.22em] text-ink">
+                      <span className="absolute left-0 top-0 bg-[image:var(--gradient-gold)] px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-ink">
                         {p.status}
                       </span>
                     </div>
-                    <h3 className="mt-4 text-2xl transition-colors duration-300 group-hover:text-gold">
+                    <h3 className="mt-4 text-xl transition-colors duration-300 group-hover:text-gold">
                       {p.name}
                     </h3>
-                    <p className="mt-1 text-[0.6rem] font-bold uppercase tracking-[0.2em] text-muted-foreground">
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                       {p.type}
                     </p>
                   </Link>
@@ -158,7 +158,7 @@ export function Navbar() {
                     <span className="font-display text-sm text-gold">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-display text-4xl text-ink">{link.label}</span>
+                    <span className="font-display text-3xl text-ink">{link.label}</span>
                   </Link>
                 </li>
               ))}
