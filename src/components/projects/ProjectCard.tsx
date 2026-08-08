@@ -26,7 +26,7 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
         </span>
       </div>
 
-      <div className="mt-6 flex items-start justify-between gap-6 border-t-2 border-ink pt-5">
+      <div className="mt-6 flex items-start justify-between gap-6 border-t border-ink/15 pt-5">
         <div>
           <div className="flex items-baseline gap-3">
             <span className="font-display text-lg text-ink/25 transition-colors duration-500 group-hover:text-gold">
